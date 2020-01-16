@@ -25,7 +25,6 @@ void loop()
   int ValorFoto1 = 0;                                   //Variável para fotodetector de referência (foto1)
   int ValorFoto2 = 0;                                   //Variável para fotodetector de saída (foto2)
   int N=2;                                              //Número de médias para obtenção de um ponto na curva de reflectância
-  int a;                                                //Variável auxiliar
   float R = 0;                                          //Valor médio de reflectância (Será plotado no gráfico)
   float soma = 0;                                       //Variável auxiliar para cáclculo de média
   float reflect[N];                                     //Vetor para armazenar valores adquiridos de reflectância(Tem que ter o tamanho de N)
