@@ -2,7 +2,8 @@
 // Laboratório de Sensores e Instrumentação - Grupo de Fotônica - UFPE
 // Gabriel de Freitas
 // OBS: 6.163° / revolução. 1 passo rotaciona 0,061°
-// OBS2: 0.011mm/ passo
+// OBS2: 0.011mm/ passo (Obtido experimentalmente para x e y)
+// OBS3: Cálculos executados são desenvolvidos no artigo: "Maintaining a stationary laser footprint during angular scan in internal-reflection experiments" - E. Fontana
 //---------------------------------------------------
 #include <math.h>
 const int stepPin = 16;
@@ -21,7 +22,7 @@ float w = 0;                    //Posição atual do feixe na face superior do p
 float a, b, c;                  //Dimensões do prisma (em mm)
 float n;                        //Índice de refração do prisma
 //Fim da definição de parâmetros do prisma
-//Definições de variáveis úteis para correção da posição do feixe
+//Definições de variáveis úteis para correção da posição do feixe (Proveniente do artigo)
 float l;                        //Variável auxiliar no cálculo (pode ser excluída depois)
 float d;                        //Distância necessária transladar para manter feixe no mesmo ponto
 float theta_r;                  //Ângulo refratado. Útil no cálculo de d
@@ -40,38 +41,38 @@ void loop() {
   else{
     digitalWrite(dirPin, LOW);    //Rotaciona para região positiva (Direita)
   }
-  if(theta<0.003)
+  if(theta<0.003)                 // Passo subdividido em 1/16
   {
     digitalWrite(MS1,HIGH);
     digitalWrite(MS2,HIGH);
     digitalWrite(MS3,HIGH);
   }
-  if(theta<0,007)
+  if(theta<0,007)                 // Passo subdividido em 1/8
   {
     digitalWrite(MS1,HIGH);
     digitalWrite(MS2,HIGH);
     digitalWrite(MS3,LOW);
   }
-  if(theta<0,015)
+  if(theta<0,015)                 // Passo subdividido em 1/4
   {
     digitalWrite(MS1,LOW);
     digitalWrite(MS2,HIGH);
     digitalWrite(MS3,LOW); 
   }
-  if(theta<0,03)
+  if(theta<0,03)                  // Passo subdividido em 1/2
   {
     digitalWrite(MS1,HIGH);
     digitalWrite(MS2,LOW);
     digitalWrite(MS3,LOW);
   }
-  else
+  else                            // Passo completo
   {
     digitalWrite(MS1, LOW);
     digitalWrite(MS2, LOW);
     digitalWrite(MS3, LOW);
   }
  
-  for(int i = 0; i < (theta/0,061); i++)    //Dá o número de passos relacionado ao ângulo a ser rotacionado - Atenção para a imprecisão nesse for
+  for(int i = 0; i < (int)(theta/0,061); i++)    //Dá o número de passos relacionado ao ângulo a ser rotacionado - Atenção para a imprecisão nesse for
   {
     digitalWrite(stepPin,HIGH);
     delayMicroseconds(500);
@@ -86,12 +87,12 @@ void loop() {
   
   if (d<0)                                  //Verifica se translada no sentido +x ou -x (VERIFICAR ISSO NO MOTOR)
   {                   
-    digitalWrite(dirPin, HIGH);             //Translada para região negativa(Esquerda)
+    digitalWrite(dirPinx, HIGH);             //Translada para região negativa(Esquerda)
   }
   else{
-    digitalWrite(dirPin, LOW);               //Translada para região positiva (Direita)
+    digitalWrite(dirPinx, LOW);              //Translada para região positiva (Direita)
   }
-  for (int i=0; i < d/0,011; i++)           //Dá o número de passos relacionado a distância a ser transladada em mm
+  for (int i=0; i < (int)(d/0,011); i++)           //Dá o número de passos relacionado a distância a ser transladada em mm
   {
     digitalWrite(stepPinx, HIGH);
     delayMicroseconds(500);
@@ -99,3 +100,4 @@ void loop() {
     delayMicroseconds(500);
   }
 }
+   
