@@ -23,6 +23,7 @@ float a, b, c;                  //Dimensões do prisma (em mm)
 float n;                        //Índice de refração do prisma
 //Fim da definição de parâmetros do prisma
 //Definições de variáveis úteis para correção da posição do feixe (Proveniente do artigo)
+float theta_atual;              //Ângulo que o sistema está, vai ser usado na construção do gráfico.
 float l;                        //Variável auxiliar no cálculo (pode ser excluída depois)
 float d;                        //Distância necessária transladar para manter feixe no mesmo ponto
 float theta_r;                  //Ângulo refratado. Útil no cálculo de d
@@ -87,10 +88,10 @@ void loop() {
   
   if (d<0)                                  //Verifica se translada no sentido +x ou -x (VERIFICAR ISSO NO MOTOR)
   {                   
-    digitalWrite(dirPinx, HIGH);             //Translada para região negativa(Esquerda)
+    digitalWrite(DirPinx, HIGH);             //Translada para região negativa(Esquerda)
   }
   else{
-    digitalWrite(dirPinx, LOW);              //Translada para região positiva (Direita)
+    digitalWrite(DirPinx, LOW);              //Translada para região positiva (Direita)
   }
   for (int i=0; i < (int)(d/0,011); i++)           //Dá o número de passos relacionado a distância a ser transladada em mm
   {
@@ -99,5 +100,5 @@ void loop() {
     digitalWrite(stepPinx,LOW);
     delayMicroseconds(500);
   }
-}
-   
+  theta_atual=theta_atual+theta;
+} 
