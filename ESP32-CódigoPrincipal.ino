@@ -6,10 +6,10 @@
 //OBS3: Cálculos executados são desenvolvidos no artigo: "Maintaining a stationary laser footprint during angular scan in internal-reflection experiments" - E. Fontana
 //---------------------------------------------------
 #include <math.h>
-const int stepPin = 16;
+const int stepPin = 18;
 const int dirPin = 19;
-const int stepPinx = 15;
-const int DirPinx = 14;
+const int stepPinx = 22;
+const int DirPinx = 23;
 const int MS1 = 9;
 const int MS2 = 10;
 const int MS3 = 11;
@@ -31,11 +31,13 @@ float alpha = pi/4;                                     //Ângulo em rad
 float beta = pi/4;
 float gama = pi/4;
 float w = 0;                                            //Posição atual do feixe na face superior do prisma, inicialmente 0
-float a, b, c;                                          //Dimensões do prisma (em mm)
-float n;                                                //Índice de refração do prisma
+float a = 50;                                           //Dimensões do prisma (em mm)
+float b = 50;
+float c = 50;
+float n = 1.5;                                          //Índice de refração do prisma
 //Fim da definição de parâmetros do prisma
 //Definições de variáveis úteis para correção da posição do feixe (Proveniente do artigo)
-float theta;                                            //Ângulo a ser rotacionado
+float theta = 6;                                      //Ângulo a ser rotacionado
 float theta_atual;                                      //Ângulo que o sistema está, essa variável vai ser usada para plotar o gráfico.
 float l;                                                //Variável auxiliar no cálculo (pode ser excluída depois)
 float d;                                                //Distância necessária transladar para manter feixe no mesmo ponto
@@ -139,7 +141,9 @@ void rotacionar (float theta)
 
 void loop()
 {
-  adquirir();
+  //adquirir();
   rotacionar(theta);
-  Serial.println(R,theta_atual);
+  Serial.println(d);
+  //delay(5000);
+  //Serial.println(R,theta_atual);
 }
