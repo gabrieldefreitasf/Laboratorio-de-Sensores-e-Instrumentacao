@@ -61,4 +61,40 @@ void loop() {
     x = x - posicao60_x;                            // Atualiza a posição em x e y
     y = y - posicao60_y;
     break;
+    case 59:
+    {
+    float posicao59_x= esp;                         // Define a posição em x e y para a célula em questão
+    float posicao59_y=0;
+    
+    if ((x - posicao59_x) < 0){                     // Verifica se o movimento é no sentido +x ou -x (CHECAR NA MONTAGEM EXPERIMENTAL)
+      digitalWrite(dirPinx, HIGH);
+    }
+    else{
+      digitalWrite(dirPinx, LOW);
+    }
+    
+    for(int i=0; i < int(x - posicao59_x); i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
+      digitalWrite(stepPinx, HIGH);
+      delayMicroseconds(500);
+      digitalWrite(stepPinx, LOW);
+      delayMicroseconds(500);
+    }
+    
+    if ((y - posicao59_y) < 0){                     // Repete o processo para y
+      digitalWrite(dirPiny, HIGH);
+    }
+    else{
+      digitalWrite(dirPiny, LOW);
+    }
+    
+    for(int i=0; i < int(y - posicao59_y); i++){
+      digitalWrite(stepPiny, HIGH);
+      delayMicroseconds(500);
+      digitalWrite(stepPiny, LOW);
+      delayMicroseconds(500);
+    }
+    x = x - posicao59_x;                            // Atualiza a posição em x e y
+    y = y - posicao59_y;
+    }
+    break;
   }
