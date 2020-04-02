@@ -31,6 +31,138 @@ void setup() {
 void loop() {
 
   switch(celula){
+    case 98:
+    {
+    float posicao98_x = -5*esp;
+    float posicao98_y = 3*esp;
+    }
+    break;
+    case 97:
+    {
+    float posicao97_x = -4*esp;
+    float posicao97_y = 3*esp;
+    }
+    break;
+    case 96:
+    {
+    float posicao96_x = -3*esp;
+    float posicao96_y = 3*esp;
+    }
+    break;
+    case 95:
+    {
+    float posicao95_x = -2*esp;
+    float posicao95_y = 3*esp;
+    }
+    break;
+    case 94:
+    {
+    float posicao94_x = -esp;
+    float posicao94_y = 3*esp;
+    }
+    break;
+    case 93:
+    {
+    float posicao93_x = 0;
+    float posicao93_y = 3*esp;
+    }
+    break;
+    case 92:
+    {
+    float posicao92_x = esp;
+    float posicao92_y = 3*esp;
+    }
+    break;
+    case 91:
+    {
+    float posicao91_x = 2*esp;
+    float posicao91_y = 3*esp;
+    }
+    break;
+    case 90:
+    {
+    float posicao90_x = 3*esp;
+    float posicao90_y = 3*esp;
+    }
+    break;
+    case 89:
+    {
+    float posicao89_x = 4*esp;
+    float posicao89_y = 3*esp;
+    }
+    break;
+    case 88:
+    {
+    float posicao88_x = 5*esp;
+    float posicao88_y = 3*esp;
+    }
+    break;
+    case 87:
+    {
+    float posicao87_x = -5*esp;
+    float posicao87_y = 2*esp;
+    }
+    break;
+    case 86:
+    {
+    float posicao86_x = -4*esp;
+    float posicao86_y = 2*esp;
+    }
+    break;
+    case 85:
+    {
+    float posicao85_x = -3*esp;
+    float posicao85_y = 2*esp;
+    }
+    break;
+    case 84:
+    {
+    float posicao84_x = -2*esp;
+    float posicao84_y = 2*esp;
+    }
+    break;
+    case 83:
+    {
+    float posicao83_x = -esp;
+    float posicao83_y = 2*esp;
+    }
+    break;
+    case 82:
+    {
+    float posicao82_x = 0;
+    float posicao82_y = 2*esp;
+    }
+    break;
+    case 81:
+    {
+    float posicao81_x = esp;
+    float posicao81_y = 2*esp;
+    }
+    break;
+    case 80:
+    {
+    float posicao80_x = 2*esp;
+    float posicao80_y = 2*esp;
+    }
+    break;
+    case 79:
+    {
+    float posicao79_x = 3*esp;
+    float posicao78_y = 2*esp;
+    }
+    break;
+    case 78:
+    {
+    float posicao78_x = 4*esp;
+    float posicao78_y = 2*esp;
+    }
+    break;
+    case 77:
+    {
+    float posicao77_x = 5*esp;
+    float posicao77_y = 2*esp;
+    }
+    break;
     case 76:
     {
     float posicao76_x = -5*esp;
