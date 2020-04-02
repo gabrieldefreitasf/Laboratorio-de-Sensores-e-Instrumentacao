@@ -2,7 +2,7 @@
 // Laboratório de Sensores e Instrumentação - Grupo de Fotônica - UFPE
 // Gabriel de Freitas
 //-------------------------------------
-float esp;                                         // Espaçamento entre célular em mm
+float esp = 2;                                     // Espaçamento entre célular em mm
 float x,y = 0;                                     // Posição em x e y em mm, sempre inicia-se em (0,0)
 int celula;                                        // Célula que o reflectômetro deve se posicionar, receber valo de 0 a 120 do usuário
 const int stepPinx = 18;
@@ -31,27 +31,128 @@ void setup() {
 void loop() {
 
   switch(celula){
+    case 76:
+    {
+    float posicao76_x = -5*esp;
+    float posicao76_y = esp;
+    }
+    break;
+    case 75:
+    {
+    float posicao75_x = -4*esp;
+    float posicao75_y =esp;
+    }
+    break;
+    case 74:
+    {
+    float posicao73_x = -3*esp;
+    float posicao73_y = esp;
+    }
+    break;
+    case 73:
+    {
+    float posicao73_x = -2*esp;
+    float posicao73_y = esp;
+    }
+    break;
+    case 72:
+    {
+    float posicao72_x = -esp;
+    float posicao72_y = esp;
+    }
+    break;
+    case 71:
+    {
+    float posicao71_x = 0;
+    float posicao71_y = esp;
+    }
+    break;
+    case 70:
+    {
+    float posicao70_x = esp;
+    float posicao70_y = esp;
+    }
+    break;
+    case 69:
+    {
+    float posicao69_x = 2*esp;
+    float posicao69_y = esp;
+    }
+    break;
+    case 68:
+    {
+    float posicao68_x = 3*esp;
+    float posicao68_y = esp;
+    }
+    break;
+    case 67:
+    {
+    float posicao67_x = 4*esp;
+    float posicao67_y = esp;
+    }
+    break;
+    case 66:
+    {
+    float posicao66_x = 5*esp;
+    float posicao66_y = esp;
+    }
+    break;
+    case 65:
+    {
+    float posicao65_x = -5*esp;
+    float posicao65_y = 0;
+    }
+    break;
+    case 64:
+    {
+    float posicao64_x = -4*esp;
+    float posicao64_y = 0;
+    }
+    break;
+    case 63:
+    {
+    float posicao63_x = -3*esp;
+    float posicao63_y = 0;
+    }
+    break;
+    case 62:
+    {
+    float posicao62_x = -2*esp;
+    float posicao62_y = 0;
+    }
+    break;
+    case 61:
+    {
+    float posicao61_x = -esp;
+    float posicao61_y=0;
+    }
+    break;
     case 60:
+    {
     float posicao60_x=0;                            // Define a posição em x e y para a célula em questão
     float posicao60_y=0;
+    
     if ((x - posicao60_x) < 0){                     // Verifica se o movimento é no sentido +x ou -x (CHECAR NA MONTAGEM EXPERIMENTAL)
       digitalWrite(dirPinx, HIGH);
     }
     else{
       digitalWrite(dirPinx, LOW);
     }
+    
     for(int i=0; i < int(x - posicao60_x); i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
       digitalWrite(stepPinx, HIGH);
       delayMicroseconds(500);
       digitalWrite(stepPinx, LOW);
       delayMicroseconds(500);
     }
+    
     if ((y - posicao60_y) < 0){                     // Repete o processo para y
       digitalWrite(dirPiny, HIGH);
     }
     else{
       digitalWrite(dirPiny, LOW);
     }
+    
     for(int i=0; i < int(y - posicao60_y); i++){
       digitalWrite(stepPiny, HIGH);
       delayMicroseconds(500);
@@ -60,7 +161,9 @@ void loop() {
     }
     x = x - posicao60_x;                            // Atualiza a posição em x e y
     y = y - posicao60_y;
+    }
     break;
+    
     case 59:
     {
     float posicao59_x= esp;                         // Define a posição em x e y para a célula em questão
@@ -97,4 +200,30 @@ void loop() {
     y = y - posicao59_y;
     }
     break;
+    case 58:
+    {
+    float posicao58_x= 2*esp;                         // Define a posição em x e y para a célula em questão
+    float posicao58_y=0;
+    }
+    break;
+    case 57:
+    {
+    float posicao57_x= 3*esp;                         // Define a posição em x e y para a célula em questão
+    float posicao57_y=0;
+    }
+    break;
+    case 56:
+    {
+    float posicao56_x= 4*esp;                         // Define a posição em x e y para a célula em questão
+    float posicao56_y=0;
+    }
+    break;
+    case 55:
+    {
+    float posicao55_x= 5*esp;                         // Define a posição em x e y para a célula em questão
+    float posicao55_y=0;
+    }
+    break;
   }
+  
+}
