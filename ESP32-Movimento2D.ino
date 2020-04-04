@@ -620,6 +620,204 @@ void loop() {
     float posicao33_y= -2*esp;
     }
     break;
+    case 32:
+    {
+    float posicao32_x= -5*esp;                         // Define a posição em x e y para a célula em questão
+    float posicao32_y= -3*esp;
+    }
+    break;
+    case 31:
+    {
+    float posicao31_x= -4*esp;                         // Define a posição em x e y para a célula em questão
+    float posicao31_y= -3*esp;
+    }
+    break;
+    case 30:
+    {
+    float posicao30_x= -3*esp;                         // Define a posição em x e y para a célula em questão
+    float posicao30_y= -3*esp;
+    }
+    break;
+    case 29:
+    {
+    float posicao29_x= -2*esp;                         // Define a posição em x e y para a célula em questão
+    float posicao29_y= -3*esp;
+    }
+    break;
+    case 28:
+    {
+    float posicao28_x= -esp;                         // Define a posição em x e y para a célula em questão
+    float posicao28_y= -3*esp;
+    }
+    break;
+    case 27:
+    {
+    float posicao27_x= 0;                         // Define a posição em x e y para a célula em questão
+    float posicao27_y= -3*esp;
+    }
+    break;
+    case 26:
+    {
+    float posicao26_x= esp;                         // Define a posição em x e y para a célula em questão
+    float posicao26_y= -3*esp;
+    }
+    break;
+    case 25:
+    {
+    float posicao25_x= 2*esp;                         // Define a posição em x e y para a célula em questão
+    float posicao25_y= -3*esp;
+    }
+    break;
+    case 24:
+    {
+    float posicao24_x= 3*esp;                         // Define a posição em x e y para a célula em questão
+    float posicao24_y= -3*esp;
+    }
+    break;
+    case 23:
+    {
+    float posicao23_x= 4*esp;                         // Define a posição em x e y para a célula em questão
+    float posicao23_y= -3*esp;
+    }
+    break;
+    case 22:
+    {
+    float posicao22_x= 5*esp;                         // Define a posição em x e y para a célula em questão
+    float posicao22_y= -3*esp;
+    }
+    break;
+    case 21:
+    {
+    float posicao21_x= -5*esp;                         // Define a posição em x e y para a célula em questão
+    float posicao21_y= -4*esp;
+    }
+    break;
+    case 20:
+    {
+    float posicao20_x= -4*esp;                         // Define a posição em x e y para a célula em questão
+    float posicao20_y= -4*esp;
+    }
+    break;
+    case 19:
+    {
+    float posicao19_x= -3*esp;                         // Define a posição em x e y para a célula em questão
+    float posicao19_y= -4*esp;
+    }
+    break;
+    case 18:
+    {
+    float posicao18_x= -2*esp;                         // Define a posição em x e y para a célula em questão
+    float posicao18_y= -4*esp;
+    }
+    break;
+    case 17:
+    {
+    float posicao18_x= -esp;                         // Define a posição em x e y para a célula em questão
+    float posicao18_y= -4*esp;
+    }
+    break;
+    case 16:
+    {
+    float posicao16_x= 0;                         // Define a posição em x e y para a célula em questão
+    float posicao16_y= -4*esp;
+    }
+    break;
+    case 15:
+    {
+    float posicao15_x= esp;                         // Define a posição em x e y para a célula em questão
+    float posicao15_y= -4*esp;
+    }
+    break;
+    case 14:
+    {
+    float posicao18_x= 2*esp;                         // Define a posição em x e y para a célula em questão
+    float posicao18_y= -4*esp;
+    }
+    break;
+    case 13:
+    {
+    float posicao13_x= 3*esp;                         // Define a posição em x e y para a célula em questão
+    float posicao13_y= -4*esp;
+    }
+    break;
+    case 12:
+    {
+    float posicao12_x= 4*esp;                         // Define a posição em x e y para a célula em questão
+    float posicao12_y= -4*esp;
+    }
+    break;
+    case 11:
+    {
+    float posicao11_x= 5*esp;                         // Define a posição em x e y para a célula em questão
+    float posicao11_y= -4*esp;
+    }
+    break;
+    case 10:
+    {
+    float posicao10_x= -5*esp;                         // Define a posição em x e y para a célula em questão
+    float posicao10_y= -5*esp;
+    }
+    break;
+    case 9:
+    {
+    float posicao9_x= -4*esp;                         // Define a posição em x e y para a célula em questão
+    float posicao9_y= -5*esp;
+    }
+    break;
+    case 8:
+    {
+    float posicao8_x= -3*esp;                         // Define a posição em x e y para a célula em questão
+    float posicao8_y= -5*esp;
+    }
+    break;
+    case 7:
+    {
+    float posicao7_x= -2*esp;                         // Define a posição em x e y para a célula em questão
+    float posicao7_y= -5*esp;
+    }
+    break;
+    case 6:
+    {
+    float posicao6_x= -esp;                         // Define a posição em x e y para a célula em questão
+    float posicao6_y= -5*esp;
+    }
+    break;
+    case 5:
+    {
+    float posicao5_x= 0;                         // Define a posição em x e y para a célula em questão
+    float posicao5_y= -5*esp;
+    }
+    break;
+    case 4:
+    {
+    float posicao4_x= esp;                         // Define a posição em x e y para a célula em questão
+    float posicao4_y= -5*esp;
+    }
+    break;
+    case 3:
+    {
+    float posicao3_x= 2*esp;                         // Define a posição em x e y para a célula em questão
+    float posicao3_y= -5*esp;
+    }
+    break;
+    case 2:
+    {
+    float posicao2_x= 3*esp;                         // Define a posição em x e y para a célula em questão
+    float posicao2_y= -5*esp;
+    }
+    break;
+    case 1:
+    {
+    float posicao1_x= 4*esp;                         // Define a posição em x e y para a célula em questão
+    float posicao1_y= -5*esp;
+    }
+    break;
+    case 0:
+    {
+    float posicao0_x= 5*esp;                         // Define a posição em x e y para a célula em questão
+    float posicao0_y= -5*esp;
+    }
+    break;
   }
   
 }
