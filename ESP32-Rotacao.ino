@@ -75,7 +75,7 @@ void loop() {
     digitalWrite(MS3, LOW);
   }
  
-  for(int i = 0; i < (int)(theta/0,061); i++)    //Dá o número de passos relacionado ao ângulo a ser rotacionado - Atenção para a imprecisão nesse for
+  for(int i = 0; i < int(abs(theta)/0,061); i++)    //Dá o número de passos relacionado ao ângulo a ser rotacionado - Atenção para a imprecisão nesse for
   {
     digitalWrite(stepPin,HIGH);
     delayMicroseconds(500);
@@ -95,7 +95,7 @@ void loop() {
   else{
     digitalWrite(DirPinx, LOW);              //Translada para região positiva (Direita)
   }
-  for (int i=0; i < (int)(d/0,011); i++)     //Dá o número de passos relacionado a distância a ser transladada em mm
+  for (int i=0; i < (int abs(d)/0,011); i++)     //Dá o número de passos relacionado a distância a ser transladada em mm
   {
     digitalWrite(stepPinx, HIGH);
     delayMicroseconds(500);
