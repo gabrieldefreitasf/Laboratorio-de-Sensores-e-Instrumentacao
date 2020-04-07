@@ -1,7 +1,9 @@
 // Controle de Motores de Passo Baseado em Driver a4988 em Experimento RPS - Movimento 2D
 // Laboratório de Sensores e Instrumentação - Grupo de Fotônica - UFPE
 // Gabriel de Freitas
+// OBS: 0.011mm/ passo (Obtido experimentalmente para x e y)
 //-------------------------------------
+#include <math.h>
 float esp = 2;                                     // Espaçamento entre célular em mm
 float x,y = 0;                                     // Posição em x e y em mm, sempre inicia-se em (0,0)
 int celula;                                        // Célula que o reflectômetro deve se posicionar, receber valo de 0 a 120 do usuário
@@ -396,35 +398,35 @@ void loop() {
     float posicao60_x=0;                            // Define a posição em x e y para a célula em questão
     float posicao60_y=0;
     
-    if ((x - posicao60_x) < 0){                     // Verifica se o movimento é no sentido +x ou -x (CHECAR NA MONTAGEM EXPERIMENTAL)
+    if ((posicao60_x - x) < 0){                     // Verifica se o movimento é no sentido +x ou -x (CHECAR NA MONTAGEM EXPERIMENTAL)
       digitalWrite(dirPinx, HIGH);
     }
     else{
       digitalWrite(dirPinx, LOW);
     }
     
-    for(int i=0; i < int(x - posicao60_x); i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
+    for(int i=0; i < int(abs(posicao60_x - x)/0,011); i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
       digitalWrite(stepPinx, HIGH);
       delayMicroseconds(500);
       digitalWrite(stepPinx, LOW);
       delayMicroseconds(500);
     }
     
-    if ((y - posicao60_y) < 0){                     // Repete o processo para y
+    if ((posicao60_y - y) < 0){                     // Repete o processo para y
       digitalWrite(dirPiny, HIGH);
     }
     else{
       digitalWrite(dirPiny, LOW);
     }
     
-    for(int i=0; i < int(y - posicao60_y); i++){
+    for(int i=0; i < int(abs(posicao60_y - y)/0,011); i++){
       digitalWrite(stepPiny, HIGH);
       delayMicroseconds(500);
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = x - posicao60_x;                            // Atualiza a posição em x e y
-    y = y - posicao60_y;
+    x = posicao60_x - x;                            // Atualiza a posição em x e y
+    y = posicao60_y - y;
     }
     break;
     
@@ -433,35 +435,35 @@ void loop() {
     float posicao59_x= esp;                         // Define a posição em x e y para a célula em questão
     float posicao59_y=0;
     
-    if ((x - posicao59_x) < 0){                     // Verifica se o movimento é no sentido +x ou -x (CHECAR NA MONTAGEM EXPERIMENTAL)
+    if ((posicao59_x - x) < 0){                     // Verifica se o movimento é no sentido +x ou -x (CHECAR NA MONTAGEM EXPERIMENTAL)
       digitalWrite(dirPinx, HIGH);
     }
     else{
       digitalWrite(dirPinx, LOW);
     }
     
-    for(int i=0; i < int(x - posicao59_x); i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
+    for(int i=0; i < int(abs(posicao59_x - x)/0,011); i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
       digitalWrite(stepPinx, HIGH);
       delayMicroseconds(500);
       digitalWrite(stepPinx, LOW);
       delayMicroseconds(500);
     }
     
-    if ((y - posicao59_y) < 0){                     // Repete o processo para y
+    if ((posicao59_y - y) < 0){                     // Repete o processo para y
       digitalWrite(dirPiny, HIGH);
     }
     else{
       digitalWrite(dirPiny, LOW);
     }
     
-    for(int i=0; i < int(y - posicao59_y); i++){
+    for(int i=0; i < int(abs(posicao59_y - y)/0,011); i++){
       digitalWrite(stepPiny, HIGH);
       delayMicroseconds(500);
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = x - posicao59_x;                            // Atualiza a posição em x e y
-    y = y - posicao59_y;
+    x = posicao59_x - x;                            // Atualiza a posição em x e y
+    y = posicao59_y - y;
     }
     break;
     case 58:
