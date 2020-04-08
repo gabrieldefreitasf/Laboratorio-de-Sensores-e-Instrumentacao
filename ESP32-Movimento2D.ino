@@ -309,7 +309,7 @@ void loop() {
       digitalWrite(dirPinx, LOW);
     }
     
-    for(int i=0; i < int(abs(posicao76_x - x)/0,011); i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
+    for(int i=0; i < abs(posicao76_x - x)/0,011; i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
       digitalWrite(stepPinx, HIGH);
       delayMicroseconds(500);
       digitalWrite(stepPinx, LOW);
@@ -323,7 +323,7 @@ void loop() {
       digitalWrite(dirPiny, LOW);
     }
     
-    for(int i=0; i < int(abs(posicao76_y - y)/0,011); i++){
+    for(int i=0; i < abs(posicao76_y - y)/0,011; i++){
       digitalWrite(stepPiny, HIGH);
       delayMicroseconds(500);
       digitalWrite(stepPiny, LOW);
@@ -345,7 +345,7 @@ void loop() {
       digitalWrite(dirPinx, LOW);
     }
     
-    for(int i=0; i < int(abs(posicao75_x - x)/0,011); i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
+    for(int i=0; i < abs(posicao75_x - x)/0,011; i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
       digitalWrite(stepPinx, HIGH);
       delayMicroseconds(500);
       digitalWrite(stepPinx, LOW);
@@ -359,7 +359,7 @@ void loop() {
       digitalWrite(dirPiny, LOW);
     }
     
-    for(int i=0; i < int(abs(posicao75_y - y)/0,011); i++){
+    for(int i=0; i < abs(posicao75_y - y)/0,011; i++){
       digitalWrite(stepPiny, HIGH);
       delayMicroseconds(500);
       digitalWrite(stepPiny, LOW);
@@ -381,7 +381,7 @@ void loop() {
       digitalWrite(dirPinx, LOW);
     }
     
-    for(int i=0; i < int(abs(posicao74_x - x)/0,011); i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
+    for(int i=0; i < abs(posicao74_x - x)/0,011; i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
       digitalWrite(stepPinx, HIGH);
       delayMicroseconds(500);
       digitalWrite(stepPinx, LOW);
@@ -395,7 +395,7 @@ void loop() {
       digitalWrite(dirPiny, LOW);
     }
     
-    for(int i=0; i < int(abs(posicao74_y - y)/0,011); i++){
+    for(int i=0; i < abs(posicao74_y - y)/0,011; i++){
       digitalWrite(stepPiny, HIGH);
       delayMicroseconds(500);
       digitalWrite(stepPiny, LOW);
@@ -417,7 +417,7 @@ void loop() {
       digitalWrite(dirPinx, LOW);
     }
     
-    for(int i=0; i < int(abs(posicao73_x - x)/0,011); i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
+    for(int i=0; i < abs(posicao73_x - x)/0,011; i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
       digitalWrite(stepPinx, HIGH);
       delayMicroseconds(500);
       digitalWrite(stepPinx, LOW);
@@ -431,7 +431,7 @@ void loop() {
       digitalWrite(dirPiny, LOW);
     }
     
-    for(int i=0; i < int(abs(posicao73_y - y)/0,011); i++){
+    for(int i=0; i < abs(posicao73_y - y)/0,011; i++){
       digitalWrite(stepPiny, HIGH);
       delayMicroseconds(500);
       digitalWrite(stepPiny, LOW);
@@ -453,7 +453,7 @@ void loop() {
       digitalWrite(dirPinx, LOW);
     }
     
-    for(int i=0; i < int(abs(posicao72_x - x)/0,011); i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
+    for(int i=0; i < abs(posicao72_x - x)/0,011; i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
       digitalWrite(stepPinx, HIGH);
       delayMicroseconds(500);
       digitalWrite(stepPinx, LOW);
@@ -467,7 +467,7 @@ void loop() {
       digitalWrite(dirPiny, LOW);
     }
     
-    for(int i=0; i < int(abs(posicao72_y - y)/0,011); i++){
+    for(int i=0; i < abs(posicao72_y - y)/0,011; i++){
       digitalWrite(stepPiny, HIGH);
       delayMicroseconds(500);
       digitalWrite(stepPiny, LOW);
@@ -489,7 +489,7 @@ void loop() {
       digitalWrite(dirPinx, LOW);
     }
     
-    for(int i=0; i < int(abs(posicao71_x - x)/0,011); i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
+    for(int i=0; i < abs(posicao71_x - x)/0,011; i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
       digitalWrite(stepPinx, HIGH);
       delayMicroseconds(500);
       digitalWrite(stepPinx, LOW);
@@ -503,7 +503,7 @@ void loop() {
       digitalWrite(dirPiny, LOW);
     }
     
-    for(int i=0; i < int(abs(posicao71_y - y)/0,011); i++){
+    for(int i=0; i < abs(posicao71_y - y)/0,011; i++){
       digitalWrite(stepPiny, HIGH);
       delayMicroseconds(500);
       digitalWrite(stepPiny, LOW);
@@ -525,7 +525,7 @@ void loop() {
       digitalWrite(dirPinx, LOW);
     }
     
-    for(int i=0; i < int(abs(posicao70_x - x)/0,011); i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
+    for(int i=0; i < abs(posicao70_x - x)/0,011; i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
       digitalWrite(stepPinx, HIGH);
       delayMicroseconds(500);
       digitalWrite(stepPinx, LOW);
@@ -539,7 +539,7 @@ void loop() {
       digitalWrite(dirPiny, LOW);
     }
     
-    for(int i=0; i < int(abs(posicao70_y - y)/0,011); i++){
+    for(int i=0; i < abs(posicao70_y - y)/0,011; i++){
       digitalWrite(stepPiny, HIGH);
       delayMicroseconds(500);
       digitalWrite(stepPiny, LOW);
@@ -561,7 +561,7 @@ void loop() {
       digitalWrite(dirPinx, LOW);
     }
     
-    for(int i=0; i < int(abs(posicao69_x - x)/0,011); i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
+    for(int i=0; i < abs(posicao69_x - x)/0,011; i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
       digitalWrite(stepPinx, HIGH);
       delayMicroseconds(500);
       digitalWrite(stepPinx, LOW);
@@ -575,7 +575,7 @@ void loop() {
       digitalWrite(dirPiny, LOW);
     }
     
-    for(int i=0; i < int(abs(posicao69_y - y)/0,011); i++){
+    for(int i=0; i < abs(posicao69_y - y)/0,011; i++){
       digitalWrite(stepPiny, HIGH);
       delayMicroseconds(500);
       digitalWrite(stepPiny, LOW);
@@ -597,7 +597,7 @@ void loop() {
       digitalWrite(dirPinx, LOW);
     }
     
-    for(int i=0; i < int(abs(posicao68_x - x)/0,011); i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
+    for(int i=0; i < abs(posicao68_x - x)/0,011; i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
       digitalWrite(stepPinx, HIGH);
       delayMicroseconds(500);
       digitalWrite(stepPinx, LOW);
@@ -611,7 +611,7 @@ void loop() {
       digitalWrite(dirPiny, LOW);
     }
     
-    for(int i=0; i < int(abs(posicao68_y - y)/0,011); i++){
+    for(int i=0; i < abs(posicao68_y - y)/0,011; i++){
       digitalWrite(stepPiny, HIGH);
       delayMicroseconds(500);
       digitalWrite(stepPiny, LOW);
@@ -633,7 +633,7 @@ void loop() {
       digitalWrite(dirPinx, LOW);
     }
     
-    for(int i=0; i < int(abs(posicao67_x - x)/0,011); i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
+    for(int i=0; i < abs(posicao67_x - x)/0,011; i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
       digitalWrite(stepPinx, HIGH);
       delayMicroseconds(500);
       digitalWrite(stepPinx, LOW);
@@ -647,7 +647,7 @@ void loop() {
       digitalWrite(dirPiny, LOW);
     }
     
-    for(int i=0; i < int(abs(posicao67_y - y)/0,011); i++){
+    for(int i=0; i < abs(posicao67_y - y)/0,011; i++){
       digitalWrite(stepPiny, HIGH);
       delayMicroseconds(500);
       digitalWrite(stepPiny, LOW);
@@ -669,7 +669,7 @@ void loop() {
       digitalWrite(dirPinx, LOW);
     }
     
-    for(int i=0; i < int(abs(posicao66_x - x)/0,011); i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
+    for(int i=0; i < abs(posicao66_x - x)/0,011; i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
       digitalWrite(stepPinx, HIGH);
       delayMicroseconds(500);
       digitalWrite(stepPinx, LOW);
@@ -683,7 +683,7 @@ void loop() {
       digitalWrite(dirPiny, LOW);
     }
     
-    for(int i=0; i < int(abs(posicao66_y - y)/0,011); i++){
+    for(int i=0; i < abs(posicao66_y - y)/0,011; i++){
       digitalWrite(stepPiny, HIGH);
       delayMicroseconds(500);
       digitalWrite(stepPiny, LOW);
@@ -705,7 +705,7 @@ void loop() {
       digitalWrite(dirPinx, LOW);
     }
     
-    for(int i=0; i < int(abs(posicao65_x - x)/0,011); i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
+    for(int i=0; i < abs(posicao65_x - x)/0,011; i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
       digitalWrite(stepPinx, HIGH);
       delayMicroseconds(500);
       digitalWrite(stepPinx, LOW);
@@ -719,7 +719,7 @@ void loop() {
       digitalWrite(dirPiny, LOW);
     }
     
-    for(int i=0; i < int(abs(posicao65_y - y)/0,011); i++){
+    for(int i=0; i < abs(posicao65_y - y)/0,011; i++){
       digitalWrite(stepPiny, HIGH);
       delayMicroseconds(500);
       digitalWrite(stepPiny, LOW);
@@ -741,7 +741,7 @@ void loop() {
       digitalWrite(dirPinx, LOW);
     }
     
-    for(int i=0; i < int(abs(posicao64_x - x)/0,011); i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
+    for(int i=0; i < abs(posicao64_x - x)/0,011; i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
       digitalWrite(stepPinx, HIGH);
       delayMicroseconds(500);
       digitalWrite(stepPinx, LOW);
@@ -755,7 +755,7 @@ void loop() {
       digitalWrite(dirPiny, LOW);
     }
     
-    for(int i=0; i < int(abs(posicao64_y - y)/0,011); i++){
+    for(int i=0; i < abs(posicao64_y - y)/0,011; i++){
       digitalWrite(stepPiny, HIGH);
       delayMicroseconds(500);
       digitalWrite(stepPiny, LOW);
@@ -777,7 +777,7 @@ void loop() {
       digitalWrite(dirPinx, LOW);
     }
     
-    for(int i=0; i < int(abs(posicao63_x - x)/0,011); i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
+    for(int i=0; i < abs(posicao63_x - x)/0,011; i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
       digitalWrite(stepPinx, HIGH);
       delayMicroseconds(500);
       digitalWrite(stepPinx, LOW);
@@ -791,7 +791,7 @@ void loop() {
       digitalWrite(dirPiny, LOW);
     }
     
-    for(int i=0; i < int(abs(posicao63_y - y)/0,011); i++){
+    for(int i=0; i < abs(posicao63_y - y)/0,011; i++){
       digitalWrite(stepPiny, HIGH);
       delayMicroseconds(500);
       digitalWrite(stepPiny, LOW);
@@ -813,7 +813,7 @@ void loop() {
       digitalWrite(dirPinx, LOW);
     }
     
-    for(int i=0; i < int(abs(posicao62_x - x)/0,011); i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
+    for(int i=0; i < abs(posicao62_x - x)/0,011; i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
       digitalWrite(stepPinx, HIGH);
       delayMicroseconds(500);
       digitalWrite(stepPinx, LOW);
@@ -827,7 +827,7 @@ void loop() {
       digitalWrite(dirPiny, LOW);
     }
     
-    for(int i=0; i < int(abs(posicao62_y - y)/0,011); i++){
+    for(int i=0; i < abs(posicao62_y - y)/0,011; i++){
       digitalWrite(stepPiny, HIGH);
       delayMicroseconds(500);
       digitalWrite(stepPiny, LOW);
@@ -849,7 +849,7 @@ void loop() {
       digitalWrite(dirPinx, LOW);
     }
     
-    for(int i=0; i < int(abs(posicao61_x - x)/0,011); i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
+    for(int i=0; i < abs(posicao61_x - x)/0,011; i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
       digitalWrite(stepPinx, HIGH);
       delayMicroseconds(500);
       digitalWrite(stepPinx, LOW);
@@ -863,7 +863,7 @@ void loop() {
       digitalWrite(dirPiny, LOW);
     }
     
-    for(int i=0; i < int(abs(posicao61_y - y)/0,011); i++){
+    for(int i=0; i < abs(posicao61_y - y)/0,011; i++){
       digitalWrite(stepPiny, HIGH);
       delayMicroseconds(500);
       digitalWrite(stepPiny, LOW);
@@ -885,7 +885,7 @@ void loop() {
       digitalWrite(dirPinx, LOW);
     }
     
-    for(int i=0; i < int(abs(posicao60_x - x)/0,011); i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
+    for(int i=0; i < abs(posicao60_x - x)/0,011; i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
       digitalWrite(stepPinx, HIGH);
       delayMicroseconds(500);
       digitalWrite(stepPinx, LOW);
@@ -899,7 +899,7 @@ void loop() {
       digitalWrite(dirPiny, LOW);
     }
     
-    for(int i=0; i < int(abs(posicao60_y - y)/0,011); i++){
+    for(int i=0; i < abs(posicao60_y - y)/0,011; i++){
       digitalWrite(stepPiny, HIGH);
       delayMicroseconds(500);
       digitalWrite(stepPiny, LOW);
@@ -922,7 +922,7 @@ void loop() {
       digitalWrite(dirPinx, LOW);
     }
     
-    for(int i=0; i < int(abs(posicao59_x - x)/0,011); i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
+    for(int i=0; i < abs(posicao59_x - x)/0,011; i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
       digitalWrite(stepPinx, HIGH);
       delayMicroseconds(500);
       digitalWrite(stepPinx, LOW);
@@ -936,7 +936,7 @@ void loop() {
       digitalWrite(dirPiny, LOW);
     }
     
-    for(int i=0; i < int(abs(posicao59_y - y)/0,011); i++){
+    for(int i=0; i < abs(posicao59_y - y)/0,011; i++){
       digitalWrite(stepPiny, HIGH);
       delayMicroseconds(500);
       digitalWrite(stepPiny, LOW);
@@ -958,7 +958,7 @@ void loop() {
       digitalWrite(dirPinx, LOW);
     }
     
-    for(int i=0; i < int(abs(posicao58_x - x)/0,011); i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
+    for(int i=0; i < abs(posicao58_x - x)/0,011; i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
       digitalWrite(stepPinx, HIGH);
       delayMicroseconds(500);
       digitalWrite(stepPinx, LOW);
@@ -972,7 +972,7 @@ void loop() {
       digitalWrite(dirPiny, LOW);
     }
     
-    for(int i=0; i < int(abs(posicao58_y - y)/0,011); i++){
+    for(int i=0; i < abs(posicao58_y - y)/0,011; i++){
       digitalWrite(stepPiny, HIGH);
       delayMicroseconds(500);
       digitalWrite(stepPiny, LOW);
@@ -994,7 +994,7 @@ void loop() {
       digitalWrite(dirPinx, LOW);
     }
     
-    for(int i=0; i < int(abs(posicao57_x - x)/0,011); i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
+    for(int i=0; i < abs(posicao57_x - x)/0,011; i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
       digitalWrite(stepPinx, HIGH);
       delayMicroseconds(500);
       digitalWrite(stepPinx, LOW);
@@ -1008,7 +1008,7 @@ void loop() {
       digitalWrite(dirPiny, LOW);
     }
     
-    for(int i=0; i < int(abs(posicao57_y - y)/0,011); i++){
+    for(int i=0; i < abs(posicao57_y - y)/0,011; i++){
       digitalWrite(stepPiny, HIGH);
       delayMicroseconds(500);
       digitalWrite(stepPiny, LOW);
@@ -1030,7 +1030,7 @@ void loop() {
       digitalWrite(dirPinx, LOW);
     }
     
-    for(int i=0; i < int(abs(posicao56_x - x)/0,011); i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
+    for(int i=0; i < abs(posicao56_x - x)/0,011; i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
       digitalWrite(stepPinx, HIGH);
       delayMicroseconds(500);
       digitalWrite(stepPinx, LOW);
@@ -1044,7 +1044,7 @@ void loop() {
       digitalWrite(dirPiny, LOW);
     }
     
-    for(int i=0; i < int(abs(posicao56_y - y)/0,011); i++){
+    for(int i=0; i < abs(posicao56_y - y)/0,011; i++){
       digitalWrite(stepPiny, HIGH);
       delayMicroseconds(500);
       digitalWrite(stepPiny, LOW);
@@ -1066,7 +1066,7 @@ void loop() {
       digitalWrite(dirPinx, LOW);
     }
     
-    for(int i=0; i < int(abs(posicao55_x - x)/0,011); i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
+    for(int i=0; i < abs(posicao55_x - x)/0,011; i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
       digitalWrite(stepPinx, HIGH);
       delayMicroseconds(500);
       digitalWrite(stepPinx, LOW);
@@ -1080,7 +1080,7 @@ void loop() {
       digitalWrite(dirPiny, LOW);
     }
     
-    for(int i=0; i < int(abs(posicao55_y - y)/0,011); i++){
+    for(int i=0; i < abs(posicao55_y - y)/0,011; i++){
       digitalWrite(stepPiny, HIGH);
       delayMicroseconds(500);
       digitalWrite(stepPiny, LOW);
