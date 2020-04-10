@@ -2414,132 +2414,792 @@ void loop() {
     {
     float posicao54_x= -5*esp;                         // Define a posição em x e y para a célula em questão
     float posicao54_y= -esp;
+
+    if ((posicao54_x - x) < 0){                     // Verifica se o movimento é no sentido +x ou -x (CHECAR NA MONTAGEM EXPERIMENTAL)
+      digitalWrite(dirPinx, HIGH);
+    }
+    else{
+      digitalWrite(dirPinx, LOW);
+    }
+    
+    for(int i=0; i < abs(posicao54_x - x)/0,011; i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
+      digitalWrite(stepPinx, HIGH);
+      delayMicroseconds(500);
+      digitalWrite(stepPinx, LOW);
+      delayMicroseconds(500);
+    }
+    
+    if ((posicao54_y - y) < 0){                     // Repete o processo para y
+      digitalWrite(dirPiny, HIGH);
+    }
+    else{
+      digitalWrite(dirPiny, LOW);
+    }
+    
+    for(int i=0; i < abs(posicao54_y - y)/0,011; i++){
+      digitalWrite(stepPiny, HIGH);
+      delayMicroseconds(500);
+      digitalWrite(stepPiny, LOW);
+      delayMicroseconds(500);
+    }
+    x = posicao54_x - x;                            // Atualiza a posição em x e y
+    y = posicao54_y - y;
     }
     break;
     case 53:
     {
     float posicao53_x= -4*esp;                         // Define a posição em x e y para a célula em questão
     float posicao53_y= -esp;
+
+    if ((posicao53_x - x) < 0){                     // Verifica se o movimento é no sentido +x ou -x (CHECAR NA MONTAGEM EXPERIMENTAL)
+      digitalWrite(dirPinx, HIGH);
+    }
+    else{
+      digitalWrite(dirPinx, LOW);
+    }
+    
+    for(int i=0; i < abs(posicao53_x - x)/0,011; i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
+      digitalWrite(stepPinx, HIGH);
+      delayMicroseconds(500);
+      digitalWrite(stepPinx, LOW);
+      delayMicroseconds(500);
+    }
+    
+    if ((posicao53_y - y) < 0){                     // Repete o processo para y
+      digitalWrite(dirPiny, HIGH);
+    }
+    else{
+      digitalWrite(dirPiny, LOW);
+    }
+    
+    for(int i=0; i < abs(posicao53_y - y)/0,011; i++){
+      digitalWrite(stepPiny, HIGH);
+      delayMicroseconds(500);
+      digitalWrite(stepPiny, LOW);
+      delayMicroseconds(500);
+    }
+    x = posicao53_x - x;                            // Atualiza a posição em x e y
+    y = posicao53_y - y;
     }
     break;
     case 52:
     {
     float posicao52_x= -3*esp;                         // Define a posição em x e y para a célula em questão
     float posicao52_y= -esp;
+
+    if ((posicao52_x - x) < 0){                     // Verifica se o movimento é no sentido +x ou -x (CHECAR NA MONTAGEM EXPERIMENTAL)
+      digitalWrite(dirPinx, HIGH);
+    }
+    else{
+      digitalWrite(dirPinx, LOW);
+    }
+    
+    for(int i=0; i < abs(posicao52_x - x)/0,011; i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
+      digitalWrite(stepPinx, HIGH);
+      delayMicroseconds(500);
+      digitalWrite(stepPinx, LOW);
+      delayMicroseconds(500);
+    }
+    
+    if ((posicao52_y - y) < 0){                     // Repete o processo para y
+      digitalWrite(dirPiny, HIGH);
+    }
+    else{
+      digitalWrite(dirPiny, LOW);
+    }
+    
+    for(int i=0; i < abs(posicao52_y - y)/0,011; i++){
+      digitalWrite(stepPiny, HIGH);
+      delayMicroseconds(500);
+      digitalWrite(stepPiny, LOW);
+      delayMicroseconds(500);
+    }
+    x = posicao52_x - x;                            // Atualiza a posição em x e y
+    y = posicao52_y - y;
     }
     break;
     case 51:
     {
     float posicao51_x= -2*esp;                         // Define a posição em x e y para a célula em questão
     float posicao51_y= -esp;
+
+    if ((posicao51_x - x) < 0){                     // Verifica se o movimento é no sentido +x ou -x (CHECAR NA MONTAGEM EXPERIMENTAL)
+      digitalWrite(dirPinx, HIGH);
+    }
+    else{
+      digitalWrite(dirPinx, LOW);
+    }
+    
+    for(int i=0; i < abs(posicao51_x - x)/0,011; i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
+      digitalWrite(stepPinx, HIGH);
+      delayMicroseconds(500);
+      digitalWrite(stepPinx, LOW);
+      delayMicroseconds(500);
+    }
+    
+    if ((posicao51_y - y) < 0){                     // Repete o processo para y
+      digitalWrite(dirPiny, HIGH);
+    }
+    else{
+      digitalWrite(dirPiny, LOW);
+    }
+    
+    for(int i=0; i < abs(posicao51_y - y)/0,011; i++){
+      digitalWrite(stepPiny, HIGH);
+      delayMicroseconds(500);
+      digitalWrite(stepPiny, LOW);
+      delayMicroseconds(500);
+    }
+    x = posicao51_x - x;                            // Atualiza a posição em x e y
+    y = posicao51_y - y;
     }
     break;
     case 50:
     {
     float posicao50_x= -esp;                         // Define a posição em x e y para a célula em questão
     float posicao50_y= -esp;
+
+    if ((posicao50_x - x) < 0){                     // Verifica se o movimento é no sentido +x ou -x (CHECAR NA MONTAGEM EXPERIMENTAL)
+      digitalWrite(dirPinx, HIGH);
+    }
+    else{
+      digitalWrite(dirPinx, LOW);
+    }
+    
+    for(int i=0; i < abs(posicao50_x - x)/0,011; i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
+      digitalWrite(stepPinx, HIGH);
+      delayMicroseconds(500);
+      digitalWrite(stepPinx, LOW);
+      delayMicroseconds(500);
+    }
+    
+    if ((posicao50_y - y) < 0){                     // Repete o processo para y
+      digitalWrite(dirPiny, HIGH);
+    }
+    else{
+      digitalWrite(dirPiny, LOW);
+    }
+    
+    for(int i=0; i < abs(posicao50_y - y)/0,011; i++){
+      digitalWrite(stepPiny, HIGH);
+      delayMicroseconds(500);
+      digitalWrite(stepPiny, LOW);
+      delayMicroseconds(500);
+    }
+    x = posicao50_x - x;                            // Atualiza a posição em x e y
+    y = posicao50_y - y;
     }
     break;
     case 49:
     {
     float posicao49_x= 0;                         // Define a posição em x e y para a célula em questão
     float posicao49_y= -esp;
+
+    if ((posicao49_x - x) < 0){                     // Verifica se o movimento é no sentido +x ou -x (CHECAR NA MONTAGEM EXPERIMENTAL)
+      digitalWrite(dirPinx, HIGH);
+    }
+    else{
+      digitalWrite(dirPinx, LOW);
+    }
+    
+    for(int i=0; i < abs(posicao49_x - x)/0,011; i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
+      digitalWrite(stepPinx, HIGH);
+      delayMicroseconds(500);
+      digitalWrite(stepPinx, LOW);
+      delayMicroseconds(500);
+    }
+    
+    if ((posicao49_y - y) < 0){                     // Repete o processo para y
+      digitalWrite(dirPiny, HIGH);
+    }
+    else{
+      digitalWrite(dirPiny, LOW);
+    }
+    
+    for(int i=0; i < abs(posicao49_y - y)/0,011; i++){
+      digitalWrite(stepPiny, HIGH);
+      delayMicroseconds(500);
+      digitalWrite(stepPiny, LOW);
+      delayMicroseconds(500);
+    }
+    x = posicao49_x - x;                            // Atualiza a posição em x e y
+    y = posicao49_y - y;
     }
     break;
     case 48:
     {
     float posicao48_x= esp;                         // Define a posição em x e y para a célula em questão
     float posicao48_y= -esp;
+
+    if ((posicao48_x - x) < 0){                     // Verifica se o movimento é no sentido +x ou -x (CHECAR NA MONTAGEM EXPERIMENTAL)
+      digitalWrite(dirPinx, HIGH);
+    }
+    else{
+      digitalWrite(dirPinx, LOW);
+    }
+    
+    for(int i=0; i < abs(posicao48_x - x)/0,011; i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
+      digitalWrite(stepPinx, HIGH);
+      delayMicroseconds(500);
+      digitalWrite(stepPinx, LOW);
+      delayMicroseconds(500);
+    }
+    
+    if ((posicao48_y - y) < 0){                     // Repete o processo para y
+      digitalWrite(dirPiny, HIGH);
+    }
+    else{
+      digitalWrite(dirPiny, LOW);
+    }
+    
+    for(int i=0; i < abs(posicao48_y - y)/0,011; i++){
+      digitalWrite(stepPiny, HIGH);
+      delayMicroseconds(500);
+      digitalWrite(stepPiny, LOW);
+      delayMicroseconds(500);
+    }
+    x = posicao48_x - x;                            // Atualiza a posição em x e y
+    y = posicao48_y - y;
     }
     break;
     case 47:
     {
     float posicao47_x= 2*esp;                         // Define a posição em x e y para a célula em questão
     float posicao47_y= -esp;
+
+    if ((posicao47_x - x) < 0){                     // Verifica se o movimento é no sentido +x ou -x (CHECAR NA MONTAGEM EXPERIMENTAL)
+      digitalWrite(dirPinx, HIGH);
+    }
+    else{
+      digitalWrite(dirPinx, LOW);
+    }
+    
+    for(int i=0; i < abs(posicao47_x - x)/0,011; i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
+      digitalWrite(stepPinx, HIGH);
+      delayMicroseconds(500);
+      digitalWrite(stepPinx, LOW);
+      delayMicroseconds(500);
+    }
+    
+    if ((posicao47_y - y) < 0){                     // Repete o processo para y
+      digitalWrite(dirPiny, HIGH);
+    }
+    else{
+      digitalWrite(dirPiny, LOW);
+    }
+    
+    for(int i=0; i < abs(posicao47_y - y)/0,011; i++){
+      digitalWrite(stepPiny, HIGH);
+      delayMicroseconds(500);
+      digitalWrite(stepPiny, LOW);
+      delayMicroseconds(500);
+    }
+    x = posicao47_x - x;                            // Atualiza a posição em x e y
+    y = posicao47_y - y;
     }
     break;
     case 46:
     {
     float posicao46_x= 3*esp;                         // Define a posição em x e y para a célula em questão
     float posicao46_y= -esp;
+
+    if ((posicao46_x - x) < 0){                     // Verifica se o movimento é no sentido +x ou -x (CHECAR NA MONTAGEM EXPERIMENTAL)
+      digitalWrite(dirPinx, HIGH);
+    }
+    else{
+      digitalWrite(dirPinx, LOW);
+    }
+    
+    for(int i=0; i < abs(posicao46_x - x)/0,011; i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
+      digitalWrite(stepPinx, HIGH);
+      delayMicroseconds(500);
+      digitalWrite(stepPinx, LOW);
+      delayMicroseconds(500);
+    }
+    
+    if ((posicao46_y - y) < 0){                     // Repete o processo para y
+      digitalWrite(dirPiny, HIGH);
+    }
+    else{
+      digitalWrite(dirPiny, LOW);
+    }
+    
+    for(int i=0; i < abs(posicao46_y - y)/0,011; i++){
+      digitalWrite(stepPiny, HIGH);
+      delayMicroseconds(500);
+      digitalWrite(stepPiny, LOW);
+      delayMicroseconds(500);
+    }
+    x = posicao46_x - x;                            // Atualiza a posição em x e y
+    y = posicao46_y - y;
     }
     break;
     case 45:
     {
     float posicao45_x= 4*esp;                         // Define a posição em x e y para a célula em questão
     float posicao45_y= -esp;
+
+    if ((posicao45_x - x) < 0){                     // Verifica se o movimento é no sentido +x ou -x (CHECAR NA MONTAGEM EXPERIMENTAL)
+      digitalWrite(dirPinx, HIGH);
+    }
+    else{
+      digitalWrite(dirPinx, LOW);
+    }
+    
+    for(int i=0; i < abs(posicao45_x - x)/0,011; i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
+      digitalWrite(stepPinx, HIGH);
+      delayMicroseconds(500);
+      digitalWrite(stepPinx, LOW);
+      delayMicroseconds(500);
+    }
+    
+    if ((posicao45_y - y) < 0){                     // Repete o processo para y
+      digitalWrite(dirPiny, HIGH);
+    }
+    else{
+      digitalWrite(dirPiny, LOW);
+    }
+    
+    for(int i=0; i < abs(posicao45_y - y)/0,011; i++){
+      digitalWrite(stepPiny, HIGH);
+      delayMicroseconds(500);
+      digitalWrite(stepPiny, LOW);
+      delayMicroseconds(500);
+    }
+    x = posicao45_x - x;                            // Atualiza a posição em x e y
+    y = posicao45_y - y;
     }
     break;
     case 44:
     {
     float posicao44_x= 5*esp;                         // Define a posição em x e y para a célula em questão
     float posicao44_y= -esp;
+
+    if ((posicao44_x - x) < 0){                     // Verifica se o movimento é no sentido +x ou -x (CHECAR NA MONTAGEM EXPERIMENTAL)
+      digitalWrite(dirPinx, HIGH);
+    }
+    else{
+      digitalWrite(dirPinx, LOW);
+    }
+    
+    for(int i=0; i < abs(posicao44_x - x)/0,011; i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
+      digitalWrite(stepPinx, HIGH);
+      delayMicroseconds(500);
+      digitalWrite(stepPinx, LOW);
+      delayMicroseconds(500);
+    }
+    
+    if ((posicao44_y - y) < 0){                     // Repete o processo para y
+      digitalWrite(dirPiny, HIGH);
+    }
+    else{
+      digitalWrite(dirPiny, LOW);
+    }
+    
+    for(int i=0; i < abs(posicao44_y - y)/0,011; i++){
+      digitalWrite(stepPiny, HIGH);
+      delayMicroseconds(500);
+      digitalWrite(stepPiny, LOW);
+      delayMicroseconds(500);
+    }
+    x = posicao44_x - x;                            // Atualiza a posição em x e y
+    y = posicao44_y - y;
     }
     break;
     case 43:
     {
     float posicao43_x= -5*esp;                         // Define a posição em x e y para a célula em questão
     float posicao43_y= -2*esp;
+
+    if ((posicao43_x - x) < 0){                     // Verifica se o movimento é no sentido +x ou -x (CHECAR NA MONTAGEM EXPERIMENTAL)
+      digitalWrite(dirPinx, HIGH);
+    }
+    else{
+      digitalWrite(dirPinx, LOW);
+    }
+    
+    for(int i=0; i < abs(posicao43_x - x)/0,011; i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
+      digitalWrite(stepPinx, HIGH);
+      delayMicroseconds(500);
+      digitalWrite(stepPinx, LOW);
+      delayMicroseconds(500);
+    }
+    
+    if ((posicao43_y - y) < 0){                     // Repete o processo para y
+      digitalWrite(dirPiny, HIGH);
+    }
+    else{
+      digitalWrite(dirPiny, LOW);
+    }
+    
+    for(int i=0; i < abs(posicao43_y - y)/0,011; i++){
+      digitalWrite(stepPiny, HIGH);
+      delayMicroseconds(500);
+      digitalWrite(stepPiny, LOW);
+      delayMicroseconds(500);
+    }
+    x = posicao43_x - x;                            // Atualiza a posição em x e y
+    y = posicao43_y - y;
     }
     break;
     case 42:
     {
     float posicao42_x= -4*esp;                         // Define a posição em x e y para a célula em questão
     float posicao42_y= -2*esp;
+
+    if ((posicao42_x - x) < 0){                     // Verifica se o movimento é no sentido +x ou -x (CHECAR NA MONTAGEM EXPERIMENTAL)
+      digitalWrite(dirPinx, HIGH);
+    }
+    else{
+      digitalWrite(dirPinx, LOW);
+    }
+    
+    for(int i=0; i < abs(posicao42_x - x)/0,011; i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
+      digitalWrite(stepPinx, HIGH);
+      delayMicroseconds(500);
+      digitalWrite(stepPinx, LOW);
+      delayMicroseconds(500);
+    }
+    
+    if ((posicao42_y - y) < 0){                     // Repete o processo para y
+      digitalWrite(dirPiny, HIGH);
+    }
+    else{
+      digitalWrite(dirPiny, LOW);
+    }
+    
+    for(int i=0; i < abs(posicao42_y - y)/0,011; i++){
+      digitalWrite(stepPiny, HIGH);
+      delayMicroseconds(500);
+      digitalWrite(stepPiny, LOW);
+      delayMicroseconds(500);
+    }
+    x = posicao42_x - x;                            // Atualiza a posição em x e y
+    y = posicao42_y - y;
     }
     break;
     case 41:
     {
     float posicao41_x= -3*esp;                         // Define a posição em x e y para a célula em questão
     float posicao41_y= -2*esp;
+
+    if ((posicao41_x - x) < 0){                     // Verifica se o movimento é no sentido +x ou -x (CHECAR NA MONTAGEM EXPERIMENTAL)
+      digitalWrite(dirPinx, HIGH);
+    }
+    else{
+      digitalWrite(dirPinx, LOW);
+    }
+    
+    for(int i=0; i < abs(posicao41_x - x)/0,011; i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
+      digitalWrite(stepPinx, HIGH);
+      delayMicroseconds(500);
+      digitalWrite(stepPinx, LOW);
+      delayMicroseconds(500);
+    }
+    
+    if ((posicao41_y - y) < 0){                     // Repete o processo para y
+      digitalWrite(dirPiny, HIGH);
+    }
+    else{
+      digitalWrite(dirPiny, LOW);
+    }
+    
+    for(int i=0; i < abs(posicao41_y - y)/0,011; i++){
+      digitalWrite(stepPiny, HIGH);
+      delayMicroseconds(500);
+      digitalWrite(stepPiny, LOW);
+      delayMicroseconds(500);
+    }
+    x = posicao41_x - x;                            // Atualiza a posição em x e y
+    y = posicao41_y - y;
     }
     break;
     case 40:
     {
-    float posicao43_x= -2*esp;                         // Define a posição em x e y para a célula em questão
-    float posicao43_y= -2*esp;
+    float posicao40_x= -2*esp;                         // Define a posição em x e y para a célula em questão
+    float posicao40_y= -2*esp;
+
+    if ((posicao40_x - x) < 0){                     // Verifica se o movimento é no sentido +x ou -x (CHECAR NA MONTAGEM EXPERIMENTAL)
+      digitalWrite(dirPinx, HIGH);
+    }
+    else{
+      digitalWrite(dirPinx, LOW);
+    }
+    
+    for(int i=0; i < abs(posicao40_x - x)/0,011; i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
+      digitalWrite(stepPinx, HIGH);
+      delayMicroseconds(500);
+      digitalWrite(stepPinx, LOW);
+      delayMicroseconds(500);
+    }
+    
+    if ((posicao40_y - y) < 0){                     // Repete o processo para y
+      digitalWrite(dirPiny, HIGH);
+    }
+    else{
+      digitalWrite(dirPiny, LOW);
+    }
+    
+    for(int i=0; i < abs(posicao40_y - y)/0,011; i++){
+      digitalWrite(stepPiny, HIGH);
+      delayMicroseconds(500);
+      digitalWrite(stepPiny, LOW);
+      delayMicroseconds(500);
+    }
+    x = posicao40_x - x;                            // Atualiza a posição em x e y
+    y = posicao40_y - y;
     }
     break;
     case 39:
     {
     float posicao39_x= -esp;                         // Define a posição em x e y para a célula em questão
     float posicao39_y= -2*esp;
+
+    if ((posicao39_x - x) < 0){                     // Verifica se o movimento é no sentido +x ou -x (CHECAR NA MONTAGEM EXPERIMENTAL)
+      digitalWrite(dirPinx, HIGH);
+    }
+    else{
+      digitalWrite(dirPinx, LOW);
+    }
+    
+    for(int i=0; i < abs(posicao39_x - x)/0,011; i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
+      digitalWrite(stepPinx, HIGH);
+      delayMicroseconds(500);
+      digitalWrite(stepPinx, LOW);
+      delayMicroseconds(500);
+    }
+    
+    if ((posicao39_y - y) < 0){                     // Repete o processo para y
+      digitalWrite(dirPiny, HIGH);
+    }
+    else{
+      digitalWrite(dirPiny, LOW);
+    }
+    
+    for(int i=0; i < abs(posicao39_y - y)/0,011; i++){
+      digitalWrite(stepPiny, HIGH);
+      delayMicroseconds(500);
+      digitalWrite(stepPiny, LOW);
+      delayMicroseconds(500);
+    }
+    x = posicao39_x - x;                            // Atualiza a posição em x e y
+    y = posicao39_y - y;
     }
     break;
     case 38:
     {
     float posicao38_x= 0;                         // Define a posição em x e y para a célula em questão
     float posicao38_y= -2*esp;
+
+    if ((posicao38_x - x) < 0){                     // Verifica se o movimento é no sentido +x ou -x (CHECAR NA MONTAGEM EXPERIMENTAL)
+      digitalWrite(dirPinx, HIGH);
+    }
+    else{
+      digitalWrite(dirPinx, LOW);
+    }
+    
+    for(int i=0; i < abs(posicao38_x - x)/0,011; i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
+      digitalWrite(stepPinx, HIGH);
+      delayMicroseconds(500);
+      digitalWrite(stepPinx, LOW);
+      delayMicroseconds(500);
+    }
+    
+    if ((posicao38_y - y) < 0){                     // Repete o processo para y
+      digitalWrite(dirPiny, HIGH);
+    }
+    else{
+      digitalWrite(dirPiny, LOW);
+    }
+    
+    for(int i=0; i < abs(posicao38_y - y)/0,011; i++){
+      digitalWrite(stepPiny, HIGH);
+      delayMicroseconds(500);
+      digitalWrite(stepPiny, LOW);
+      delayMicroseconds(500);
+    }
+    x = posicao38_x - x;                            // Atualiza a posição em x e y
+    y = posicao38_y - y;
     }
     break;
     case 37:
     {
     float posicao37_x= esp;                         // Define a posição em x e y para a célula em questão
     float posicao37_y= -2*esp;
+
+    if ((posicao37_x - x) < 0){                     // Verifica se o movimento é no sentido +x ou -x (CHECAR NA MONTAGEM EXPERIMENTAL)
+      digitalWrite(dirPinx, HIGH);
+    }
+    else{
+      digitalWrite(dirPinx, LOW);
+    }
+    
+    for(int i=0; i < abs(posicao37_x - x)/0,011; i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
+      digitalWrite(stepPinx, HIGH);
+      delayMicroseconds(500);
+      digitalWrite(stepPinx, LOW);
+      delayMicroseconds(500);
+    }
+    
+    if ((posicao37_y - y) < 0){                     // Repete o processo para y
+      digitalWrite(dirPiny, HIGH);
+    }
+    else{
+      digitalWrite(dirPiny, LOW);
+    }
+    
+    for(int i=0; i < abs(posicao37_y - y)/0,011; i++){
+      digitalWrite(stepPiny, HIGH);
+      delayMicroseconds(500);
+      digitalWrite(stepPiny, LOW);
+      delayMicroseconds(500);
+    }
+    x = posicao37_x - x;                            // Atualiza a posição em x e y
+    y = posicao37_y - y;
     }
     break;
     case 36:
     {
     float posicao36_x= 2*esp;                         // Define a posição em x e y para a célula em questão
     float posicao36_y= -2*esp;
+
+    if ((posicao36_x - x) < 0){                     // Verifica se o movimento é no sentido +x ou -x (CHECAR NA MONTAGEM EXPERIMENTAL)
+      digitalWrite(dirPinx, HIGH);
+    }
+    else{
+      digitalWrite(dirPinx, LOW);
+    }
+    
+    for(int i=0; i < abs(posicao36_x - x)/0,011; i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
+      digitalWrite(stepPinx, HIGH);
+      delayMicroseconds(500);
+      digitalWrite(stepPinx, LOW);
+      delayMicroseconds(500);
+    }
+    
+    if ((posicao36_y - y) < 0){                     // Repete o processo para y
+      digitalWrite(dirPiny, HIGH);
+    }
+    else{
+      digitalWrite(dirPiny, LOW);
+    }
+    
+    for(int i=0; i < abs(posicao36_y - y)/0,011; i++){
+      digitalWrite(stepPiny, HIGH);
+      delayMicroseconds(500);
+      digitalWrite(stepPiny, LOW);
+      delayMicroseconds(500);
+    }
+    x = posicao36_x - x;                            // Atualiza a posição em x e y
+    y = posicao36_y - y;
     }
     break;
     case 35:
     {
     float posicao35_x= 3*esp;                         // Define a posição em x e y para a célula em questão
     float posicao35_y= -2*esp;
+
+    if ((posicao35_x - x) < 0){                     // Verifica se o movimento é no sentido +x ou -x (CHECAR NA MONTAGEM EXPERIMENTAL)
+      digitalWrite(dirPinx, HIGH);
+    }
+    else{
+      digitalWrite(dirPinx, LOW);
+    }
+    
+    for(int i=0; i < abs(posicao35_x - x)/0,011; i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
+      digitalWrite(stepPinx, HIGH);
+      delayMicroseconds(500);
+      digitalWrite(stepPinx, LOW);
+      delayMicroseconds(500);
+    }
+    
+    if ((posicao35_y - y) < 0){                     // Repete o processo para y
+      digitalWrite(dirPiny, HIGH);
+    }
+    else{
+      digitalWrite(dirPiny, LOW);
+    }
+    
+    for(int i=0; i < abs(posicao35_y - y)/0,011; i++){
+      digitalWrite(stepPiny, HIGH);
+      delayMicroseconds(500);
+      digitalWrite(stepPiny, LOW);
+      delayMicroseconds(500);
+    }
+    x = posicao35_x - x;                            // Atualiza a posição em x e y
+    y = posicao35_y - y;
     }
     break;
     case 34:
     {
     float posicao34_x= 4*esp;                         // Define a posição em x e y para a célula em questão
     float posicao34_y= -2*esp;
+
+    if ((posicao34_x - x) < 0){                     // Verifica se o movimento é no sentido +x ou -x (CHECAR NA MONTAGEM EXPERIMENTAL)
+      digitalWrite(dirPinx, HIGH);
+    }
+    else{
+      digitalWrite(dirPinx, LOW);
+    }
+    
+    for(int i=0; i < abs(posicao34_x - x)/0,011; i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
+      digitalWrite(stepPinx, HIGH);
+      delayMicroseconds(500);
+      digitalWrite(stepPinx, LOW);
+      delayMicroseconds(500);
+    }
+    
+    if ((posicao34_y - y) < 0){                     // Repete o processo para y
+      digitalWrite(dirPiny, HIGH);
+    }
+    else{
+      digitalWrite(dirPiny, LOW);
+    }
+    
+    for(int i=0; i < abs(posicao34_y - y)/0,011; i++){
+      digitalWrite(stepPiny, HIGH);
+      delayMicroseconds(500);
+      digitalWrite(stepPiny, LOW);
+      delayMicroseconds(500);
+    }
+    x = posicao34_x - x;                            // Atualiza a posição em x e y
+    y = posicao34_y - y;
     }
     break;
     case 33:
     {
     float posicao33_x= 5*esp;                         // Define a posição em x e y para a célula em questão
     float posicao33_y= -2*esp;
+
+    if ((posicao33_x - x) < 0){                     // Verifica se o movimento é no sentido +x ou -x (CHECAR NA MONTAGEM EXPERIMENTAL)
+      digitalWrite(dirPinx, HIGH);
+    }
+    else{
+      digitalWrite(dirPinx, LOW);
+    }
+    
+    for(int i=0; i < abs(posicao33_x - x)/0,011; i++){    // Move, em x, o necessário para chegar na posição pré definida da célula
+      digitalWrite(stepPinx, HIGH);
+      delayMicroseconds(500);
+      digitalWrite(stepPinx, LOW);
+      delayMicroseconds(500);
+    }
+    
+    if ((posicao33_y - y) < 0){                     // Repete o processo para y
+      digitalWrite(dirPiny, HIGH);
+    }
+    else{
+      digitalWrite(dirPiny, LOW);
+    }
+    
+    for(int i=0; i < abs(posicao33_y - y)/0,011; i++){
+      digitalWrite(stepPiny, HIGH);
+      delayMicroseconds(500);
+      digitalWrite(stepPiny, LOW);
+      delayMicroseconds(500);
+    }
+    x = posicao33_x - x;                            // Atualiza a posição em x e y
+    y = posicao33_y - y;
     }
     break;
     case 32:
