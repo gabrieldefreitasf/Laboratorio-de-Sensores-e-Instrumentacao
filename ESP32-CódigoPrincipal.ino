@@ -6,15 +6,15 @@
 //OBS3: Cálculos executados são desenvolvidos no artigo: "Maintaining a stationary laser footprint during angular scan in internal-reflection experiments" - E. Fontana
 //---------------------------------------------------
 #include <math.h>
-const int stepPin = 15;                               // Passo e direção para motor de movimento angular
-const int dirPin = 2;
-const int stepPinx = 4;
-const int dirPinx = 16;
-const int stepPiny = 17;
-const int dirPiny = 5;
-const int MS1 = 19;
-const int MS2 = 21;
-const int MS3 = 3;
+const int stepPin = 5;                               // Passo e direção para motor de movimento angular
+const int dirPin = 17;
+const int stepPinx = 16;
+const int dirPinx = 4;
+const int stepPiny = 2;
+const int dirPiny = 15;
+const int MS1 = 21;
+const int MS2 = 19;
+const int MS3 = 18;
 // Declaração de Entradas Analógicas
 const int foto1 = 34;                                   // Fotodetector de referência é conectado ao GPIO 34 (Analog ADC1_CH6)
 const int foto2 = 35;                                   // Fotodetector de saída é conectado ao GPIO 35 (Analog ADC1_CH7)
