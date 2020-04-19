@@ -29,9 +29,9 @@ float reflect[2];                                     //Vetor para armazenar val
 //Fim das variáveis para aquisição de dados
 float pi = 3.14159;
 // Definição de parâmetros do prisma
-float alpha = pi/4;                                     //Ângulo em rad
-float beta = pi/4;
-float gama = pi/4;
+float alpha = pi/3;                                     //Ângulo em rad
+float beta = pi/3;
+float gama = pi/3;
 float w = 0;                                            //Posição atual do feixe na face superior do prisma, inicialmente 0
 float a = 50;                                           //Dimensões do prisma (em mm)
 float b = 50;
@@ -86,25 +86,25 @@ void rotacionar (float theta)
   else{
     digitalWrite(dirPin, LOW);                          //Rotaciona para região positiva (Direita)
   }
-  if(theta<0.003)                                       //Passo subdividido em 1/16
+  if(abs(theta)<=0,003)                                       //Passo subdividido em 1/16
   {
     digitalWrite(MS1,HIGH);
     digitalWrite(MS2,HIGH);
     digitalWrite(MS3,HIGH);
   }
-  if(theta<0,007)                                       //Passo subdividido em 1/8
+  if(abs(theta)>0,003 && abs(theta)<=0,007)                                       //Passo subdividido em 1/8
   {
     digitalWrite(MS1,HIGH);
     digitalWrite(MS2,HIGH);
     digitalWrite(MS3,LOW);
   }
-  if(theta<0,015)                                       //Passo subdividido em 1/4
+  if(abs(theta)>0,007 && abs(theta)<=0,015)                                       //Passo subdividido em 1/4
   {
     digitalWrite(MS1,LOW);
     digitalWrite(MS2,HIGH);
     digitalWrite(MS3,LOW); 
   }
-  if(theta<0,03)                                        //Passo subdividido em 1/2
+  if(abs(theta)>0,015 && abs(theta)<=0,03)                                        //Passo subdividido em 1/2
   {
     digitalWrite(MS1,HIGH);
     digitalWrite(MS2,LOW);
@@ -144,6 +144,7 @@ void rotacionar (float theta)
     delayMicroseconds(500);
   }
   theta_atual = theta_atual+theta;
+   x = x+d;
 }
 
 void ir_para(int celula) {
@@ -181,8 +182,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao120_x - x;                            // Atualiza a posição em x e y
-    y = posicao120_y - y;
+    x = posicao120_x;                            // Atualiza a posição em x e y
+    y = posicao120_y;
     }
     break;
     case 119:
@@ -217,8 +218,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao119_x - x;                            // Atualiza a posição em x e y
-    y = posicao119_y - y;
+    x = posicao119_x;                            // Atualiza a posição em x e y
+    y = posicao119_y;
     }
     break;
     case 118:
@@ -253,8 +254,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao118_x - x;                            // Atualiza a posição em x e y
-    y = posicao118_y - y;
+    x = posicao118_x;                            // Atualiza a posição em x e y
+    y = posicao118_y;
     }
     break;
     case 117:
@@ -289,8 +290,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao117_x - x;                            // Atualiza a posição em x e y
-    y = posicao117_y - y;
+    x = posicao117_x;                            // Atualiza a posição em x e y
+    y = posicao117_y;
     }
     break;
     case 116:
@@ -325,8 +326,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao116_x - x;                            // Atualiza a posição em x e y
-    y = posicao116_y - y;
+    x = posicao116_x;                            // Atualiza a posição em x e y
+    y = posicao116_y;
     }
     break;
     case 115:
@@ -361,8 +362,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao115_x - x;                            // Atualiza a posição em x e y
-    y = posicao115_y - y;
+    x = posicao115_x;                            // Atualiza a posição em x e y
+    y = posicao115_y;
     }
     break;
     case 114:
@@ -397,8 +398,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao114_x - x;                            // Atualiza a posição em x e y
-    y = posicao114_y - y;
+    x = posicao114_x;                            // Atualiza a posição em x e y
+    y = posicao114_y;
     }
     break;
     case 113:
@@ -433,8 +434,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao113_x - x;                            // Atualiza a posição em x e y
-    y = posicao113_y - y;
+    x = posicao113_x;                            // Atualiza a posição em x e y
+    y = posicao113_y;
     }
     break;
     case 112:
@@ -469,8 +470,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao112_x - x;                            // Atualiza a posição em x e y
-    y = posicao112_y - y;
+    x = posicao112_x;                            // Atualiza a posição em x e y
+    y = posicao112_y;
     }
     break;
     case 111:
@@ -505,8 +506,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao111_x - x;                            // Atualiza a posição em x e y
-    y = posicao111_y - y;
+    x = posicao111_x;                            // Atualiza a posição em x e y
+    y = posicao111_y;
     }
     break;
     case 110:
@@ -541,8 +542,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao110_x - x;                            // Atualiza a posição em x e y
-    y = posicao110_y - y;
+    x = posicao110_x;                            // Atualiza a posição em x e y
+    y = posicao110_y;
     }
     break;
     case 109:
@@ -577,8 +578,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao109_x - x;                            // Atualiza a posição em x e y
-    y = posicao109_y - y;
+    x = posicao109_x;                            // Atualiza a posição em x e y
+    y = posicao109_y;
     }
     break;
     case 108:
@@ -613,8 +614,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao108_x - x;                            // Atualiza a posição em x e y
-    y = posicao108_y - y;
+    x = posicao108_x;                            // Atualiza a posição em x e y
+    y = posicao108_y;
     }
     break;
     case 107:
@@ -649,8 +650,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao107_x - x;                            // Atualiza a posição em x e y
-    y = posicao107_y - y;
+    x = posicao107_x;                            // Atualiza a posição em x e y
+    y = posicao107_y;
     }
     break;
     case 106:
@@ -685,8 +686,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao106_x - x;                            // Atualiza a posição em x e y
-    y = posicao106_y - y;
+    x = posicao106_x;                            // Atualiza a posição em x e y
+    y = posicao106_y;
     }
     break;
     case 105:
@@ -721,8 +722,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao105_x - x;                            // Atualiza a posição em x e y
-    y = posicao105_y - y;
+    x = posicao105_x;                            // Atualiza a posição em x e y
+    y = posicao105_y;
     }
     break;
     case 104:
@@ -757,8 +758,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao104_x - x;                            // Atualiza a posição em x e y
-    y = posicao104_y - y;
+    x = posicao104_x;                            // Atualiza a posição em x e y
+    y = posicao104_y;
     }
     break;
     case 103:
@@ -793,8 +794,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao103_x - x;                            // Atualiza a posição em x e y
-    y = posicao103_y - y;
+    x = posicao103_x;                            // Atualiza a posição em x e y
+    y = posicao103_y;
     }
     break;
     case 102:
@@ -829,8 +830,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao102_x - x;                            // Atualiza a posição em x e y
-    y = posicao102_y - y;
+    x = posicao102_x;                            // Atualiza a posição em x e y
+    y = posicao102_y;
     }
     break;
     case 101:
@@ -865,8 +866,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao101_x - x;                            // Atualiza a posição em x e y
-    y = posicao101_y - y;
+    x = posicao101_x;                            // Atualiza a posição em x e y
+    y = posicao101_y;
     }
     break;
     case 100:
@@ -901,8 +902,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao100_x - x;                            // Atualiza a posição em x e y
-    y = posicao100_y - y;
+    x = posicao100_x;                            // Atualiza a posição em x e y
+    y = posicao100_y;
     }
     break;
     case 99:
@@ -937,8 +938,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao99_x - x;                            // Atualiza a posição em x e y
-    y = posicao99_y - y;
+    x = posicao99_x;                            // Atualiza a posição em x e y
+    y = posicao99_y;
     }
     break;
     case 98:
@@ -973,8 +974,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao98_x - x;                            // Atualiza a posição em x e y
-    y = posicao98_y - y;
+    x = posicao98_x;                            // Atualiza a posição em x e y
+    y = posicao98_y;
     }
     break;
     case 97:
@@ -1009,8 +1010,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao97_x - x;                            // Atualiza a posição em x e y
-    y = posicao97_y - y;
+    x = posicao97_x;                            // Atualiza a posição em x e y
+    y = posicao97_y;
     }
     break;
     case 96:
@@ -1045,8 +1046,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao96_x - x;                            // Atualiza a posição em x e y
-    y = posicao96_y - y;
+    x = posicao96_x;                            // Atualiza a posição em x e y
+    y = posicao96_y;
     }
     break;
     case 95:
@@ -1081,8 +1082,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao95_x - x;                            // Atualiza a posição em x e y
-    y = posicao95_y - y;
+    x = posicao95_x;                            // Atualiza a posição em x e y
+    y = posicao95_y;
     }
     break;
     case 94:
@@ -1117,8 +1118,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao94_x - x;                            // Atualiza a posição em x e y
-    y = posicao94_y - y;
+    x = posicao94_x;                            // Atualiza a posição em x e y
+    y = posicao94_y;
     }
     break;
     case 93:
@@ -1153,8 +1154,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao93_x - x;                            // Atualiza a posição em x e y
-    y = posicao93_y - y;
+    x = posicao93_x;                            // Atualiza a posição em x e y
+    y = posicao93_y;
     }
     break;
     case 92:
@@ -1189,8 +1190,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao92_x - x;                            // Atualiza a posição em x e y
-    y = posicao92_y - y;
+    x = posicao92_x;                            // Atualiza a posição em x e y
+    y = posicao92_y;
     }
     break;
     case 91:
@@ -1225,8 +1226,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao91_x - x;                            // Atualiza a posição em x e y
-    y = posicao91_y - y;
+    x = posicao91_x;                            // Atualiza a posição em x e y
+    y = posicao91_y;
     }
     break;
     case 90:
@@ -1261,8 +1262,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao90_x - x;                            // Atualiza a posição em x e y
-    y = posicao90_y - y;
+    x = posicao90_x;                            // Atualiza a posição em x e y
+    y = posicao90_y;
     }
     break;
     case 89:
@@ -1297,8 +1298,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao89_x - x;                            // Atualiza a posição em x e y
-    y = posicao89_y - y;
+    x = posicao89_x;                            // Atualiza a posição em x e y
+    y = posicao89_y;
     }
     break;
     case 88:
@@ -1333,8 +1334,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao88_x - x;                            // Atualiza a posição em x e y
-    y = posicao88_y - y;
+    x = posicao88_x;                            // Atualiza a posição em x e y
+    y = posicao88_y;
     }
     break;
     case 87:
@@ -1369,8 +1370,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao87_x - x;                            // Atualiza a posição em x e y
-    y = posicao87_y - y;
+    x = posicao87_x;                            // Atualiza a posição em x e y
+    y = posicao87_y;
     }
     break;
     case 86:
@@ -1405,8 +1406,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao86_x - x;                            // Atualiza a posição em x e y
-    y = posicao86_y - y;
+    x = posicao86_x;                            // Atualiza a posição em x e y
+    y = posicao86_y;
     }
     break;
     case 85:
@@ -1441,8 +1442,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao85_x - x;                            // Atualiza a posição em x e y
-    y = posicao85_y - y;
+    x = posicao85_x;                            // Atualiza a posição em x e y
+    y = posicao85_y;
     }
     break;
     case 84:
@@ -1477,8 +1478,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao84_x - x;                            // Atualiza a posição em x e y
-    y = posicao84_y - y;
+    x = posicao84_x;                            // Atualiza a posição em x e y
+    y = posicao84_y;
     }
     break;
     case 83:
@@ -1513,8 +1514,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao83_x - x;                            // Atualiza a posição em x e y
-    y = posicao83_y - y;
+    x = posicao83_x;                            // Atualiza a posição em x e y
+    y = posicao83_y;
     }
     break;
     case 82:
@@ -1549,8 +1550,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao82_x - x;                            // Atualiza a posição em x e y
-    y = posicao82_y - y;
+    x = posicao82_x;                            // Atualiza a posição em x e y
+    y = posicao82_y;
     }
     break;
     case 81:
@@ -1585,8 +1586,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao81_x - x;                            // Atualiza a posição em x e y
-    y = posicao81_y - y;
+    x = posicao81_x;                            // Atualiza a posição em x e y
+    y = posicao81_y;
     }
     break;
     case 80:
@@ -1621,8 +1622,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao80_x - x;                            // Atualiza a posição em x e y
-    y = posicao80_y - y;
+    x = posicao80_x;                            // Atualiza a posição em x e y
+    y = posicao80_y;
     }
     break;
     case 79:
@@ -1657,8 +1658,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao79_x - x;                            // Atualiza a posição em x e y
-    y = posicao79_y - y;
+    x = posicao79_x;                            // Atualiza a posição em x e y
+    y = posicao79_y;
     }
     break;
     case 78:
@@ -1693,8 +1694,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao78_x - x;                            // Atualiza a posição em x e y
-    y = posicao78_y - y;
+    x = posicao78_x;                            // Atualiza a posição em x e y
+    y = posicao78_y;
     }
     break;
     case 77:
@@ -1729,8 +1730,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao77_x - x;                            // Atualiza a posição em x e y
-    y = posicao77_y - y;
+    x = posicao77_x;                            // Atualiza a posição em x e y
+    y = posicao77_y;
     }
     break;
     case 76:
@@ -1765,8 +1766,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao76_x - x;                            // Atualiza a posição em x e y
-    y = posicao76_y - y;
+    x = posicao76_x;                            // Atualiza a posição em x e y
+    y = posicao76_y;
     }
     break;
     case 75:
@@ -1801,8 +1802,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao75_x - x;                            // Atualiza a posição em x e y
-    y = posicao75_y - y;
+    x = posicao75_x;                            // Atualiza a posição em x e y
+    y = posicao75_y;
     }
     break;
     case 74:
@@ -1837,8 +1838,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao74_x - x;                            // Atualiza a posição em x e y
-    y = posicao74_y - y;
+    x = posicao74_x;                            // Atualiza a posição em x e y
+    y = posicao74_y;
     }
     break;
     case 73:
@@ -1873,8 +1874,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao73_x - x;                            // Atualiza a posição em x e y
-    y = posicao73_y - y;
+    x = posicao73_x;                            // Atualiza a posição em x e y
+    y = posicao73_y;
     }
     break;
     case 72:
@@ -1909,8 +1910,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao72_x - x;                            // Atualiza a posição em x e y
-    y = posicao72_y - y;
+    x = posicao72_x;                            // Atualiza a posição em x e y
+    y = posicao72_y;
     }
     break;
     case 71:
@@ -1945,8 +1946,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao71_x - x;                            // Atualiza a posição em x e y
-    y = posicao71_y - y;
+    x = posicao71_x;                            // Atualiza a posição em x e y
+    y = posicao71_y;
     }
     break;
     case 70:
@@ -1981,8 +1982,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao70_x - x;                            // Atualiza a posição em x e y
-    y = posicao70_y - y;
+    x = posicao70_x;                            // Atualiza a posição em x e y
+    y = posicao70_y;
     }
     break;
     case 69:
@@ -2017,8 +2018,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao69_x - x;                            // Atualiza a posição em x e y
-    y = posicao69_y - y;
+    x = posicao69_x;                            // Atualiza a posição em x e y
+    y = posicao69_y;
     }
     break;
     case 68:
@@ -2053,8 +2054,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao68_x - x;                            // Atualiza a posição em x e y
-    y = posicao68_y - y;
+    x = posicao68_x;                            // Atualiza a posição em x e y
+    y = posicao68_y;
     }
     break;
     case 67:
@@ -2089,8 +2090,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao67_x - x;                            // Atualiza a posição em x e y
-    y = posicao67_y - y;
+    x = posicao67_x;                            // Atualiza a posição em x e y
+    y = posicao67_y;
     }
     break;
     case 66:
@@ -2125,8 +2126,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao66_x - x;                            // Atualiza a posição em x e y
-    y = posicao66_y - y;
+    x = posicao66_x;                            // Atualiza a posição em x e y
+    y = posicao66_y;
     }
     break;
     case 65:
@@ -2161,8 +2162,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao65_x - x;                            // Atualiza a posição em x e y
-    y = posicao65_y - y;
+    x = posicao65_x;                            // Atualiza a posição em x e y
+    y = posicao65_y;
     }
     break;
     case 64:
@@ -2197,8 +2198,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao64_x - x;                            // Atualiza a posição em x e y
-    y = posicao64_y - y;
+    x = posicao64_x;                            // Atualiza a posição em x e y
+    y = posicao64_y;
     }
     break;
     case 63:
@@ -2233,8 +2234,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao63_x - x;                            // Atualiza a posição em x e y
-    y = posicao63_y - y;
+    x = posicao63_x;                            // Atualiza a posição em x e y
+    y = posicao63_y;
     }
     break;
     case 62:
@@ -2269,8 +2270,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao62_x - x;                            // Atualiza a posição em x e y
-    y = posicao62_y - y;
+    x = posicao62_x;                            // Atualiza a posição em x e y
+    y = posicao62_y;
     }
     break;
     case 61:
@@ -2305,8 +2306,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao61_x - x;                            // Atualiza a posição em x e y
-    y = posicao61_y - y;
+    x = posicao61_x;                            // Atualiza a posição em x e y
+    y = posicao61_y;
     }
     break;
     case 60:
@@ -2341,8 +2342,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao60_x - x;                            // Atualiza a posição em x e y
-    y = posicao60_y - y;
+    x = posicao60_x;                            // Atualiza a posição em x e y
+    y = posicao60_y;
     }
     break;
     
@@ -2378,8 +2379,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao59_x - x;                            // Atualiza a posição em x e y
-    y = posicao59_y - y;
+    x = posicao59_x;                            // Atualiza a posição em x e y
+    y = posicao59_y;
     }
     break;
     case 58:
@@ -2414,8 +2415,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao58_x - x;                            // Atualiza a posição em x e y
-    y = posicao58_y - y;
+    x = posicao58_x;                            // Atualiza a posição em x e y
+    y = posicao58_y;
     }
     break;
     case 57:
@@ -2450,8 +2451,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao57_x - x;                            // Atualiza a posição em x e y
-    y = posicao57_y - y;
+    x = posicao57_x;                            // Atualiza a posição em x e y
+    y = posicao57_y;
     }
     break;
     case 56:
@@ -2486,8 +2487,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao56_x - x;                            // Atualiza a posição em x e y
-    y = posicao56_y - y;
+    x = posicao56_x;                            // Atualiza a posição em x e y
+    y = posicao56_y;
     }
     break;
     case 55:
@@ -2522,8 +2523,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao55_x - x;                            // Atualiza a posição em x e y
-    y = posicao55_y - y;
+    x = posicao55_x;                            // Atualiza a posição em x e y
+    y = posicao55_y;
     }
     break;
     case 54:
@@ -2558,8 +2559,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao54_x - x;                            // Atualiza a posição em x e y
-    y = posicao54_y - y;
+    x = posicao54_x;                            // Atualiza a posição em x e y
+    y = posicao54_y;
     }
     break;
     case 53:
@@ -2594,8 +2595,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao53_x - x;                            // Atualiza a posição em x e y
-    y = posicao53_y - y;
+    x = posicao53_x;                            // Atualiza a posição em x e y
+    y = posicao53_y;
     }
     break;
     case 52:
@@ -2630,8 +2631,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao52_x - x;                            // Atualiza a posição em x e y
-    y = posicao52_y - y;
+    x = posicao52_x;                            // Atualiza a posição em x e y
+    y = posicao52_y;
     }
     break;
     case 51:
@@ -2666,8 +2667,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao51_x - x;                            // Atualiza a posição em x e y
-    y = posicao51_y - y;
+    x = posicao51_x;                            // Atualiza a posição em x e y
+    y = posicao51_y;
     }
     break;
     case 50:
@@ -2702,8 +2703,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao50_x - x;                            // Atualiza a posição em x e y
-    y = posicao50_y - y;
+    x = posicao50_x;                            // Atualiza a posição em x e y
+    y = posicao50_y;
     }
     break;
     case 49:
@@ -2738,8 +2739,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao49_x - x;                            // Atualiza a posição em x e y
-    y = posicao49_y - y;
+    x = posicao49_x;                            // Atualiza a posição em x e y
+    y = posicao49_y;
     }
     break;
     case 48:
@@ -2774,8 +2775,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao48_x - x;                            // Atualiza a posição em x e y
-    y = posicao48_y - y;
+    x = posicao48_x;                            // Atualiza a posição em x e y
+    y = posicao48_y;
     }
     break;
     case 47:
@@ -2810,8 +2811,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao47_x - x;                            // Atualiza a posição em x e y
-    y = posicao47_y - y;
+    x = posicao47_x;                            // Atualiza a posição em x e y
+    y = posicao47_y;
     }
     break;
     case 46:
@@ -2846,8 +2847,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao46_x - x;                            // Atualiza a posição em x e y
-    y = posicao46_y - y;
+    x = posicao46_x;                            // Atualiza a posição em x e y
+    y = posicao46_y;
     }
     break;
     case 45:
@@ -2882,8 +2883,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao45_x - x;                            // Atualiza a posição em x e y
-    y = posicao45_y - y;
+    x = posicao45_x;                            // Atualiza a posição em x e y
+    y = posicao45_y;
     }
     break;
     case 44:
@@ -2918,8 +2919,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao44_x - x;                            // Atualiza a posição em x e y
-    y = posicao44_y - y;
+    x = posicao44_x;                            // Atualiza a posição em x e y
+    y = posicao44_y;
     }
     break;
     case 43:
@@ -2954,8 +2955,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao43_x - x;                            // Atualiza a posição em x e y
-    y = posicao43_y - y;
+    x = posicao43_x;                            // Atualiza a posição em x e y
+    y = posicao43_y;
     }
     break;
     case 42:
@@ -2990,8 +2991,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao42_x - x;                            // Atualiza a posição em x e y
-    y = posicao42_y - y;
+    x = posicao42_x;                            // Atualiza a posição em x e y
+    y = posicao42_y;
     }
     break;
     case 41:
@@ -3026,8 +3027,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao41_x - x;                            // Atualiza a posição em x e y
-    y = posicao41_y - y;
+    x = posicao41_x;                            // Atualiza a posição em x e y
+    y = posicao41_y;
     }
     break;
     case 40:
@@ -3062,8 +3063,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao40_x - x;                            // Atualiza a posição em x e y
-    y = posicao40_y - y;
+    x = posicao40_x;                            // Atualiza a posição em x e y
+    y = posicao40_y;
     }
     break;
     case 39:
@@ -3098,8 +3099,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao39_x - x;                            // Atualiza a posição em x e y
-    y = posicao39_y - y;
+    x = posicao39_x;                            // Atualiza a posição em x e y
+    y = posicao39_y;
     }
     break;
     case 38:
@@ -3134,8 +3135,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao38_x - x;                            // Atualiza a posição em x e y
-    y = posicao38_y - y;
+    x = posicao38_x;                            // Atualiza a posição em x e y
+    y = posicao38_y;
     }
     break;
     case 37:
@@ -3170,8 +3171,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao37_x - x;                            // Atualiza a posição em x e y
-    y = posicao37_y - y;
+    x = posicao37_x;                            // Atualiza a posição em x e y
+    y = posicao37_y;
     }
     break;
     case 36:
@@ -3206,8 +3207,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao36_x - x;                            // Atualiza a posição em x e y
-    y = posicao36_y - y;
+    x = posicao36_x;                            // Atualiza a posição em x e y
+    y = posicao36_y;
     }
     break;
     case 35:
@@ -3242,8 +3243,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao35_x - x;                            // Atualiza a posição em x e y
-    y = posicao35_y - y;
+    x = posicao35_x;                            // Atualiza a posição em x e y
+    y = posicao35_y;
     }
     break;
     case 34:
@@ -3278,8 +3279,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao34_x - x;                            // Atualiza a posição em x e y
-    y = posicao34_y - y;
+    x = posicao34_x;                            // Atualiza a posição em x e y
+    y = posicao34_y;
     }
     break;
     case 33:
@@ -3314,8 +3315,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao33_x - x;                            // Atualiza a posição em x e y
-    y = posicao33_y - y;
+    x = posicao33_x;                            // Atualiza a posição em x e y
+    y = posicao33_y;
     }
     break;
     case 32:
@@ -3350,8 +3351,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao32_x - x;                            // Atualiza a posição em x e y
-    y = posicao32_y - y;
+    x = posicao32_x;                            // Atualiza a posição em x e y
+    y = posicao32_y;
     }
     break;
     case 31:
@@ -3386,8 +3387,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao31_x - x;                            // Atualiza a posição em x e y
-    y = posicao31_y - y;
+    x = posicao31_x;                            // Atualiza a posição em x e y
+    y = posicao31_y;
     }
     break;
     case 30:
@@ -3422,8 +3423,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao30_x - x;                            // Atualiza a posição em x e y
-    y = posicao30_y - y;
+    x = posicao30_x;                            // Atualiza a posição em x e y
+    y = posicao30_y;
     }
     break;
     case 29:
@@ -3458,8 +3459,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao29_x - x;                            // Atualiza a posição em x e y
-    y = posicao29_y - y;
+    x = posicao29_x;                            // Atualiza a posição em x e y
+    y = posicao29_y;
     }
     break;
     case 28:
@@ -3494,8 +3495,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao28_x - x;                            // Atualiza a posição em x e y
-    y = posicao28_y - y;
+    x = posicao28_x;                            // Atualiza a posição em x e y
+    y = posicao28_y;
     }
     break;
     case 27:
@@ -3530,8 +3531,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao27_x - x;                            // Atualiza a posição em x e y
-    y = posicao27_y - y;
+    x = posicao27_x;                            // Atualiza a posição em x e y
+    y = posicao27_y;
     }
     break;
     case 26:
@@ -3566,8 +3567,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao26_x - x;                            // Atualiza a posição em x e y
-    y = posicao26_y - y;
+    x = posicao26_x;                            // Atualiza a posição em x e y
+    y = posicao26_y;
     }
     break;
     case 25:
@@ -3602,8 +3603,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao25_x - x;                            // Atualiza a posição em x e y
-    y = posicao25_y - y;
+    x = posicao25_x;                            // Atualiza a posição em x e y
+    y = posicao25_y;
     }
     break;
     case 24:
@@ -3638,8 +3639,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao24_x - x;                            // Atualiza a posição em x e y
-    y = posicao24_y - y;
+    x = posicao24_x;                            // Atualiza a posição em x e y
+    y = posicao24_y;
     }
     break;
     case 23:
@@ -3674,8 +3675,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao23_x - x;                            // Atualiza a posição em x e y
-    y = posicao23_y - y;
+    x = posicao23_x;                            // Atualiza a posição em x e y
+    y = posicao23_y;
     }
     break;
     case 22:
@@ -3710,8 +3711,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao22_x - x;                            // Atualiza a posição em x e y
-    y = posicao22_y - y;
+    x = posicao22_x;                            // Atualiza a posição em x e y
+    y = posicao22_y;
     }
     break;
     case 21:
@@ -3746,8 +3747,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao21_x - x;                            // Atualiza a posição em x e y
-    y = posicao21_y - y;
+    x = posicao21_x;                            // Atualiza a posição em x e y
+    y = posicao21_y;
     }
     break;
     case 20:
@@ -3782,8 +3783,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao20_x - x;                            // Atualiza a posição em x e y
-    y = posicao20_y - y;
+    x = posicao20_x;                            // Atualiza a posição em x e y
+    y = posicao20_y;
     }
     break;
     case 19:
@@ -3818,8 +3819,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao19_x - x;                            // Atualiza a posição em x e y
-    y = posicao19_y - y;
+    x = posicao19_x;                            // Atualiza a posição em x e y
+    y = posicao19_y;
     }
     break;
     case 18:
@@ -3854,8 +3855,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao18_x - x;                            // Atualiza a posição em x e y
-    y = posicao18_y - y;
+    x = posicao18_x;                            // Atualiza a posição em x e y
+    y = posicao18_y;
     }
     break;
     case 17:
@@ -3890,8 +3891,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao17_x - x;                            // Atualiza a posição em x e y
-    y = posicao17_y - y;
+    x = posicao17_x;                            // Atualiza a posição em x e y
+    y = posicao17_y;
     }
     break;
     case 16:
@@ -3926,8 +3927,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao16_x - x;                            // Atualiza a posição em x e y
-    y = posicao16_y - y;
+    x = posicao16_x;                            // Atualiza a posição em x e y
+    y = posicao16_y;
     }
     break;
     case 15:
@@ -3962,8 +3963,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao15_x - x;                            // Atualiza a posição em x e y
-    y = posicao15_y - y;
+    x = posicao15_x;                            // Atualiza a posição em x e y
+    y = posicao15_y;
     }
     break;
     case 14:
@@ -3998,8 +3999,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao14_x - x;                            // Atualiza a posição em x e y
-    y = posicao14_y - y;
+    x = posicao14_x;                            // Atualiza a posição em x e y
+    y = posicao14_y;
     }
     break;
     case 13:
@@ -4034,8 +4035,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao13_x - x;                            // Atualiza a posição em x e y
-    y = posicao13_y - y;
+    x = posicao13_x;                            // Atualiza a posição em x e y
+    y = posicao13_y;
     }
     break;
     case 12:
@@ -4070,8 +4071,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao12_x - x;                            // Atualiza a posição em x e y
-    y = posicao12_y - y;
+    x = posicao12_x;                            // Atualiza a posição em x e y
+    y = posicao12_y;
     }
     break;
     case 11:
@@ -4106,8 +4107,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao11_x - x;                            // Atualiza a posição em x e y
-    y = posicao11_y - y;
+    x = posicao11_x;                            // Atualiza a posição em x e y
+    y = posicao11_y;
     }
     break;
     case 10:
@@ -4142,8 +4143,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao10_x - x;                            // Atualiza a posição em x e y
-    y = posicao10_y - y;
+    x = posicao10_x;                            // Atualiza a posição em x e y
+    y = posicao10_y;
     }
     break;
     case 9:
@@ -4178,8 +4179,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao9_x - x;                            // Atualiza a posição em x e y
-    y = posicao9_y - y;
+    x = posicao9_x;                            // Atualiza a posição em x e y
+    y = posicao9_y;
     }
     break;
     case 8:
@@ -4214,8 +4215,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao8_x - x;                            // Atualiza a posição em x e y
-    y = posicao8_y - y;
+    x = posicao8_x;                            // Atualiza a posição em x e y
+    y = posicao8_y;
     }
     break;
     case 7:
@@ -4250,8 +4251,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao7_x - x;                            // Atualiza a posição em x e y
-    y = posicao7_y - y;
+    x = posicao7_x;                            // Atualiza a posição em x e y
+    y = posicao7_y;
     }
     break;
     case 6:
@@ -4286,8 +4287,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao6_x - x;                            // Atualiza a posição em x e y
-    y = posicao6_y - y;
+    x = posicao6_x;                            // Atualiza a posição em x e y
+    y = posicao6_y;
     }
     break;
     case 5:
@@ -4322,8 +4323,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao5_x - x;                            // Atualiza a posição em x e y
-    y = posicao5_y - y;
+    x = posicao5_x;                            // Atualiza a posição em x e y
+    y = posicao5_y;
     }
     break;
     case 4:
@@ -4358,8 +4359,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao4_x - x;                            // Atualiza a posição em x e y
-    y = posicao4_y - y;
+    x = posicao4_x;                            // Atualiza a posição em x e y
+    y = posicao4_y;
     }
     break;
     case 3:
@@ -4394,8 +4395,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao3_x - x;                            // Atualiza a posição em x e y
-    y = posicao3_y - y;
+    x = posicao3_x;                            // Atualiza a posição em x e y
+    y = posicao3_y;
     }
     break;
     case 2:
@@ -4430,8 +4431,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao2_x - x;                            // Atualiza a posição em x e y
-    y = posicao2_y - y;
+    x = posicao2_x;                            // Atualiza a posição em x e y
+    y = posicao2_y;
     }
     break;
     case 1:
@@ -4466,8 +4467,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao1_x - x;                            // Atualiza a posição em x e y
-    y = posicao1_y - y;
+    x = posicao1_x;                            // Atualiza a posição em x e y
+    y = posicao1_y;
     }
     break;
     case 0:
@@ -4502,8 +4503,8 @@ void ir_para(int celula) {
       digitalWrite(stepPiny, LOW);
       delayMicroseconds(500);
     }
-    x = posicao0_x - x;                            // Atualiza a posição em x e y
-    y = posicao0_y - y;
+    x = posicao0_x;                            // Atualiza a posição em x e y
+    y = posicao0_y;
     }
     break;
   }
@@ -4517,3 +4518,4 @@ void loop()
   //delay(5000);
   //Serial.println(R,theta_atual);
 }
+
