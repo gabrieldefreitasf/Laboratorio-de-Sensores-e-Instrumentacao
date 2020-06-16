@@ -4512,10 +4512,16 @@ void ir_para(int celula) {
 
 void loop()
 {
-  //adquirir();
+  for(int i = 0;i<90;i++){                           //i<(numero de pontos no experimento)
+  adquirir();
   rotacionar(theta);
-  //Serial.println(d);
+  char char_theta;
+  char char_R;
+  dtostrf(theta_atual,7,3,char_theta);                //Dado de angulo tem 5 caracteres (ex: 40,061) e 3 casas decimais
+  dtostrf(R,8,4,char_R);
+  char dados[17] = {'char_theta',';','char_R'};       //Envia uma string com valor de angulo e reflectancia separados por ; (ex: 40,061;0,5647)
   //delay(5000);
-  //Serial.println(R,theta_atual);
+  Serial.println(dados);
+  }
+  //Aqui é preciso usar uma interrupção
 }
-
