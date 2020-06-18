@@ -1,15 +1,17 @@
 """
-//Datalogger - Código para leitura de dados enviados serialmente(USB) e criação de arquivo .txt
+//Datalogger - Código para leitura de dados enviados serialmente(USB) e criação de arquivo .csv
 //Laboratório de Sensores e Instrumentação - Grupo de Fotônica - UFPE
 //Gabriel de Freitas
 """
+import csv
 import serial
-arduino = serial.Serial('/dev/ttyUSB0', 115200, timeout=.1)
-f= open("Dados-RPS.txt", "w+")
+ser = serial.Serial('/dev/ttyUSB0', 115200, timeout=.1)
+with open("Dados-RPS.csv", "w") as new_file:
+    csv_writer = csv.writer(new_file)
 while True:
-	data = arduino.readline()[:-2] #the last bit gets rid of the new-line chars
+	data = ser.readline()[:-2] #the last bit gets rid of the new-line chars(Por ser uma string, talvez o -2 nao seja necessário
 	if data:
 		print (data)
-		f.write((str(data).replace("'","").replace("b","\n")))
+		f.write(data)      #data é uma string do tipo (theta;reflectancia)
 		f.flush()
 f.close()
