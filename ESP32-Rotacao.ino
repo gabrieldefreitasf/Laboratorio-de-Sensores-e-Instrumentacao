@@ -25,8 +25,8 @@ float c = 50;
 float n = 1.5;                  //Índice de refração do prisma
 //Fim da definição de parâmetros do prisma
 //Definições de variáveis úteis para correção da posição do feixe (Proveniente do artigo)
-float theta_atual;              //Ângulo que o sistema está, vai ser usado na construção do gráfico.
-float l;                        //Variável auxiliar no cálculo (pode ser excluída depois)
+float theta_atual = 0;              //Ângulo que o sistema está, vai ser usado na construção do gráfico.
+float l;                        //Variável auxiliar no cálculo
 float d;                        //Distância necessária transladar para manter feixe no mesmo ponto
 float theta_r;                  //Ângulo refratado. Útil no cálculo de d
 float r;                        //Raio da circunferência inscrita
@@ -37,7 +37,7 @@ Serial.begin(115200);
 }
 
 void loop() {
-  float theta = 6;                //Ângulo a ser rotacionado [Receber do Usuário]
+  float theta = 0.00872665;                //Ângulo a ser rotacionado [Receber do Usuário]
   if (theta<0){                   //Verifica para qual lado deve rotacionar
     digitalWrite(dirPin, HIGH);   //Rotaciona para região negativa(Esquerda)
   }
@@ -75,7 +75,7 @@ void loop() {
     digitalWrite(MS3, LOW);
   }
  
-  for(int i = 0; i < int(abs(theta)/0,061); i++)    //Dá o número de passos relacionado ao ângulo a ser rotacionado - Atenção para a imprecisão nesse for
+  for(int i = 0; i < (int)(theta/0,061); i++)    //Dá o número de passos relacionado ao ângulo a ser rotacionado - Atenção para a imprecisão nesse for
   {
     digitalWrite(stepPin,HIGH);
     delayMicroseconds(500);
@@ -86,7 +86,7 @@ void loop() {
   l = a*sin(beta/2)*cos(alpha/2)/sin((alpha+beta)/2);
   r = a/(cos(alpha/2)/sin(alpha/2) + cos(beta/2)/sin(beta/2));
   theta_r = asin(sin(theta)/n);
-  d = -w + (1/cos(alpha+theta))*(2*sin(theta/2)*((-l+a/2)*sin(alpha+theta/2)+r*cos(alpha+theta/2)) - (w+alpha/2)*sin(alpha)*sin(theta - theta_r)/cos(theta_r));
+  d = -w + (1/cos(alpha+theta))*(2*sin(theta/2)*((-l+a/2)*sin(alpha+theta/2) + r*cos(alpha+theta/2)) - (w + a/2)*sin(alpha)*sin(theta - theta_r)/cos(theta_r));
   Serial.println(d);
   if (d<0)                                   //Verifica se translada no sentido +x ou -x (VERIFICAR ISSO NO MOTOR)
   {                   
@@ -95,7 +95,7 @@ void loop() {
   else{
     digitalWrite(DirPinx, LOW);              //Translada para região positiva (Direita)
   }
-  for (int i=0; i < (int abs(d)/0,011); i++)     //Dá o número de passos relacionado a distância a ser transladada em mm
+  for (int i=0; i < (int)(d/0,011); i++)     //Dá o número de passos relacionado a distância a ser transladada em mm
   {
     digitalWrite(stepPinx, HIGH);
     delayMicroseconds(500);
