@@ -88,7 +88,7 @@ void loop() {
   theta_r = asin(sin(theta)/n);
   d = -w + (1/cos(alpha+theta))*(2*sin(theta/2)*((-l+a/2)*sin(alpha+theta/2) + r*cos(alpha+theta/2)) - (w + a/2)*sin(alpha)*sin(theta - theta_r)/cos(theta_r));
   Serial.println(d);
-  if (d<0)                                   //Verifica se translada no sentido +x ou -x (VERIFICAR ISSO NO MOTOR)
+  if (d>0)                                   //Verifica se translada no sentido +x ou -x (VERIFICAR ISSO NO MOTOR)
   {                   
     digitalWrite(DirPinx, HIGH);             //Translada para região negativa(Esquerda)
   }
