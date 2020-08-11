@@ -17,6 +17,8 @@ void setup()
   analogSetSamples(1);                                  //Selecionando número de amostras
   analogSetPinAttenuation(34,ADC_0db);                  //Seleciona atenuação de 0db no pino 34
   analogSetPinAttenuation(35,ADC_0db);                  //Seleciona atenuação de 0db no pino 35
+  pinMode(34, INPUT);
+  pinMode(35, INPUT);
 }
 
 void loop() 
