@@ -61,6 +61,17 @@ void setup()
   analogSetSamples(1);                                  //Selecionando número de amostras
   analogSetPinAttenuation(34,ADC_0db);                  //Seleciona atenuação de 0db no pino 34
   analogSetPinAttenuation(35,ADC_0db);                  //Seleciona atenuação de 0db no pino 35
+  pinMode(5, OUTPUT);
+  pinMode(17, OUTPUT);
+  pinMode(16, OUTPUT);
+  pinMode(4, OUTPUT);
+  pinMode(2, OUTPUT);
+  pinMode(15, OUTPUT);
+  pinMode(21, OUTPUT);
+  pinMode(19, OUTPUT);
+  pinMode(18, OUTPUT);
+  pinMode(34, INTPUT);
+  pinMode(35, INTPUT);
 }
 
 void adquirir()                                         //Adquire um ponto de reflectância a partir de média de N pontos. 
