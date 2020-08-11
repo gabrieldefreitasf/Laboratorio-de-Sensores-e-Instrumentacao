@@ -34,6 +34,13 @@ float r;                        //Raio da circunferência inscrita
 
 void setup() {
 Serial.begin(115200);
+pinMode(18, OUTPUT);
+pinMode(19, OUTPUT);
+pinMode(22, OUTPUT);
+pinMode(23, OUTPUT);
+pinMode(2, OUTPUT);
+pinMode(4, OUTPUT);
+pinMode(5, OUTPUT);
 }
 
 void loop() {
