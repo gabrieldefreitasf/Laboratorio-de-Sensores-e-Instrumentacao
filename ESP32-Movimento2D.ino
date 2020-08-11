@@ -28,6 +28,10 @@ int matriz2D[11][11]{
 */
 void setup() {
   Serial.begin(115200);
+  pinMode(18, OUTPUT);
+  pinMode(19, OUTPUT);
+  pinMode(20, OUTPUT);
+  pinMode(21, OUTPUT);
 }
 
 void loop() {
