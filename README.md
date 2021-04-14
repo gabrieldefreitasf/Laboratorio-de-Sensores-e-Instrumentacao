@@ -6,7 +6,7 @@ Um código em python denominado ESP 32 - Datalogger é utilizado para gerar um a
 **Projeto desenvolvido no Laboratório de Sensores e Instrumentação do Departamento de Eletrônica e Sistemas da UFPE.**<br>
 <br>
 <br>
-**Laboratory of Sensor and Instrumentation**
+**Laboratory of Sensor and Instrumentation**<br>
 Repository for codes and design files for the automated reflectometer.<br>
 Here are the codes for ESP32 written for in Arduino framework for LSI's automated reflectometer acquisition and control module.<br>
 The codes separated by acquisition, 2D movement, rotation and an emulator for sending data.<br>
