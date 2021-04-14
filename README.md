@@ -1,7 +1,14 @@
-# Laboratorio-de-Sensores-e-Instrumentacao
-Repositório para códigos referentes ao reflectômetro automatizado.<br>
-Aqui estão códigos para ESP32 DevKit V1 escritos para Arduino IDE(avr-gcc) para aquisição e controle do reflectômetro automatizado do LSI.<br>
+# Laboratorio-de-Sensores-e-Instrumentacao(LSI)
+Repositório para códigos e arquivos de projeto referentes ao reflectômetro automatizado.<br>
+Aqui estão códigos para ESP32 DevKit V1 escritos em framework Arduino para módulo de aquisição e controle do reflectômetro automatizado do LSI.<br>
 Estão aqui os códigos separados por aquisição, movimento 2D, rotação e emulador para envio de dados.
 Um código em python denominado ESP 32 - Datalogger é utilizado para gerar um arquivo com dados provenientes da serial.<br>
 **Projeto desenvolvido no Laboratório de Sensores e Instrumentação do Departamento de Eletrônica e Sistemas da UFPE.**<br>
+<br>
+<br>
+**Laboratory of Sensor and Instrumentation**
+Repository for codes and design files for the automated reflectometer.<br>
+Here are the codes for ESP32 written for in Arduino framework for LSI's automated reflectometer acquisition and control module.<br>
+The codes separated by acquisition, 2D movement, rotation and an emulator for sending data.<br>
+A python code called ESP 32 - Datalogger is used to generate a file with data from the serial.<br>
 ![](UFPE.jpg)       ![](CTG.jpg)
