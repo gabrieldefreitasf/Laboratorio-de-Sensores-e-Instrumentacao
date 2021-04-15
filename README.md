@@ -8,7 +8,7 @@ Um código em python denominado ESP 32 - Datalogger é utilizado para gerar um a
 <br>
 **Laboratory of Sensors and Instrumentation**<br>
 Repository for codes and design files for the automated reflectometer.<br>
-Here are the codes for ESP32 written for in Arduino framework for LSI's automated reflectometer acquisition and control module.<br>
+Here are the codes for ESP32 written in Arduino framework for LSI's automated reflectometer acquisition and control module.<br>
 The codes are separated by acquisition, 2D movement, rotation and an emulator, for sending simulated data.<br>
 A python code called ESP 32 - Datalogger is used to generate a file with data from the serial.<br>
 ![](UFPE.jpg)       ![](CTG.jpg)
