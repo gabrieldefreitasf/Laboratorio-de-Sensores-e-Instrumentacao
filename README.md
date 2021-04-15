@@ -11,4 +11,5 @@ Repository for codes and design files for the automated reflectometer.<br>
 Here are the codes for ESP32 written in Arduino framework for LSI's automated reflectometer acquisition and control module.<br>
 The codes are separated by acquisition, 2D movement, rotation and an emulator, for sending simulated data.<br>
 A python code called ESP 32 - Datalogger is used to generate a file with data from the serial.<br>
+**Project developed in the Laboratory of Sensors and Instrumentation under the Department of Electronics and Systems from UFPE.**<br>
 ![](UFPE.jpg)       ![](CTG.jpg)
