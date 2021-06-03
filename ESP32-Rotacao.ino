@@ -51,25 +51,25 @@ void loop() {
   else{
     digitalWrite(dirPin, LOW);    //Rotaciona para região positiva (Direita)
   }
-  if(theta<0.003)                 // Passo subdividido em 1/16
+  if(abs(theta)<0.003)                 // Passo subdividido em 1/16
   {
     digitalWrite(MS1,HIGH);
     digitalWrite(MS2,HIGH);
     digitalWrite(MS3,HIGH);
   }
-  if(theta<0,007)                 // Passo subdividido em 1/8
+  if(abs(theta)<0.007)                 // Passo subdividido em 1/8
   {
     digitalWrite(MS1,HIGH);
     digitalWrite(MS2,HIGH);
     digitalWrite(MS3,LOW);
   }
-  if(theta<0,015)                 // Passo subdividido em 1/4
+  if(abs(theta)<0.015)                 // Passo subdividido em 1/4
   {
     digitalWrite(MS1,LOW);
     digitalWrite(MS2,HIGH);
     digitalWrite(MS3,LOW); 
   }
-  if(theta<0,03)                  // Passo subdividido em 1/2
+  if(abs(theta)<0.03)                  // Passo subdividido em 1/2
   {
     digitalWrite(MS1,HIGH);
     digitalWrite(MS2,LOW);
@@ -82,7 +82,7 @@ void loop() {
     digitalWrite(MS3, LOW);
   }
  
-  for(int i = 0; i < (int)(theta/0,061); i++)    //Dá o número de passos relacionado ao ângulo a ser rotacionado - Atenção para a imprecisão nesse for
+  for(int i = 0; i < (int)(theta/0.061); i++)    //Dá o número de passos relacionado ao ângulo a ser rotacionado - Atenção para a imprecisão nesse for
   {
     digitalWrite(stepPin,HIGH);
     delayMicroseconds(500);
@@ -102,7 +102,7 @@ void loop() {
   else{
     digitalWrite(DirPinx, LOW);              //Translada para região positiva (Direita)
   }
-  for (int i=0; i < (int)(d/0,011); i++)     //Dá o número de passos relacionado a distância a ser transladada em mm
+  for (int i=0; i < (int)(d/0.011); i++)     //Dá o número de passos relacionado a distância a ser transladada em mm
   {
     digitalWrite(stepPinx, HIGH);
     delayMicroseconds(500);
