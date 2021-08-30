@@ -1,9 +1,9 @@
 // Controle de Motores de Passo Baseado em Driver a4988 em Experimento RPS - Motor do estágio de rotação
 // Laboratório de Sensores e Instrumentação - Grupo de Fotônica - UFPE
 // Gabriel de Freitas
-// OBS: 6.163° / revolução. 1 passo rotaciona 0,061°
-// OBS2: 0.011mm/ passo (Obtido experimentalmente para x e y)
-// OBS3: Cálculos executados são desenvolvidos no artigo: "Maintaining a stationary laser footprint during angular scan in internal-reflection experiments" - E. Fontana
+// OBS: 6.163° / revolução. 1 passo rotaciona 0,031°
+// OBS2: 0.007mm/ passo (Obtido experimentalmente para x e y)
+// OBS3: Cálculos executados são desenvolvidos no artigo: "Maintaining a stationary laser footprint during angular scan in internal-reflection experiments" - E. Fontana e G. Cavalcanti
 //---------------------------------------------------
 #include <math.h>
 const int stepPin = 18;
@@ -46,30 +46,30 @@ pinMode(5, OUTPUT);
 void loop() {
   float theta = 0.00872665;                //Ângulo a ser rotacionado [Receber do Usuário]
   if (theta<0){                   //Verifica para qual lado deve rotacionar
-    digitalWrite(dirPin, HIGH);   //Rotaciona para região negativa(Esquerda)
+    digitalWrite(dirPin, HIGH);   //Rotaciona para região negativa(Sentido Anti-Horário)
   }
   else{
-    digitalWrite(dirPin, LOW);    //Rotaciona para região positiva (Direita)
+    digitalWrite(dirPin, LOW);    //Rotaciona para região positiva (Sentido Horário)
   }
-  if(abs(theta)<0.003)                 // Passo subdividido em 1/16
+  if(abs(theta)<0.002)                 // Passo subdividido em 1/16
   {
     digitalWrite(MS1,HIGH);
     digitalWrite(MS2,HIGH);
     digitalWrite(MS3,HIGH);
   }
-  if(abs(theta)<0.007)                 // Passo subdividido em 1/8
+  if(abs(theta)<0.004)                 // Passo subdividido em 1/8
   {
     digitalWrite(MS1,HIGH);
     digitalWrite(MS2,HIGH);
     digitalWrite(MS3,LOW);
   }
-  if(abs(theta)<0.015)                 // Passo subdividido em 1/4
+  if(abs(theta)<0.007)                 // Passo subdividido em 1/4
   {
     digitalWrite(MS1,LOW);
     digitalWrite(MS2,HIGH);
     digitalWrite(MS3,LOW); 
   }
-  if(abs(theta)<0.03)                  // Passo subdividido em 1/2
+  if(abs(theta)<0.015)                  // Passo subdividido em 1/2
   {
     digitalWrite(MS1,HIGH);
     digitalWrite(MS2,LOW);
@@ -82,7 +82,7 @@ void loop() {
     digitalWrite(MS3, LOW);
   }
  
-  for(int i = 0; i < (int)(theta/0.061); i++)    //Dá o número de passos relacionado ao ângulo a ser rotacionado - Atenção para a imprecisão nesse for
+  for(int i = 0; i < (int)(theta/0.031); i++)    //Dá o número de passos relacionado ao ângulo a ser rotacionado - Atenção para a imprecisão nesse for
   {
     digitalWrite(stepPin,HIGH);
     delayMicroseconds(500);
@@ -94,7 +94,7 @@ void loop() {
   r = a/(cos(alpha/2)/sin(alpha/2) + cos(beta/2)/sin(beta/2));
   theta_r = asin(sin(theta)/n);
   d = -w + (1/cos(alpha+theta))*(2*sin(theta/2)*((-l+a/2)*sin(alpha+theta/2) + r*cos(alpha+theta/2)) - (w + a/2)*sin(alpha)*sin(theta - theta_r)/cos(theta_r));
-  Serial.println(d);
+
   if (d>0)                                   //Verifica se translada no sentido +x ou -x (VERIFICAR ISSO NO MOTOR)
   {                   
     digitalWrite(DirPinx, HIGH);             //Translada para região negativa(Esquerda)
