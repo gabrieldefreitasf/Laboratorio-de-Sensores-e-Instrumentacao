@@ -1,7 +1,7 @@
 // Controle de Motores de Passo Baseado em Driver a4988 em Experimento RPS - Motor do estágio de rotação
 // Laboratório de Sensores e Instrumentação - Grupo de Fotônica - UFPE
 // Gabriel de Freitas
-// OBS: 6.163° / revolução. 1 passo rotaciona 0,031°
+// OBS: 6.163° / revolução. 1 passo rotaciona 0,031°, ou seja, 0,00054105207 rad
 // OBS2: 0.007mm/ passo (Obtido experimentalmente para x e y)
 // OBS3: Cálculos executados são desenvolvidos no artigo: "Maintaining a stationary laser footprint during angular scan in internal-reflection experiments" - E. Fontana e G. Cavalcanti
 //---------------------------------------------------
@@ -44,32 +44,32 @@ pinMode(5, OUTPUT);
 }
 
 void loop() {
-  float theta = 0.00872665;                //Ângulo a ser rotacionado [Receber do Usuário]
+  float theta = 0.00872665;                //Ângulo em radiano a ser rotacionado [Receber do Usuário]
   if (theta<0){                   //Verifica para qual lado deve rotacionar
     digitalWrite(dirPin, HIGH);   //Rotaciona para região negativa(Sentido Anti-Horário)
   }
   else{
     digitalWrite(dirPin, LOW);    //Rotaciona para região positiva (Sentido Horário)
   }
-  if(abs(theta)<0.002)                 // Passo subdividido em 1/16
+  if(abs(theta)<0.000034)                 // Passo subdividido em 1/16, (0,00054105207 rad/16)
   {
     digitalWrite(MS1,HIGH);
     digitalWrite(MS2,HIGH);
     digitalWrite(MS3,HIGH);
   }
-  if(abs(theta)<0.004)                 // Passo subdividido em 1/8
+  if(abs(theta)<0.000068)                 // Passo subdividido em 1/8
   {
     digitalWrite(MS1,HIGH);
     digitalWrite(MS2,HIGH);
     digitalWrite(MS3,LOW);
   }
-  if(abs(theta)<0.007)                 // Passo subdividido em 1/4
+  if(abs(theta)<0.00013)                 // Passo subdividido em 1/4
   {
     digitalWrite(MS1,LOW);
     digitalWrite(MS2,HIGH);
     digitalWrite(MS3,LOW); 
   }
-  if(abs(theta)<0.015)                  // Passo subdividido em 1/2
+  if(abs(theta)<0.0003)                  // Passo subdividido em 1/2 - Esta resoluçãoangular corresponde à 0,015°
   {
     digitalWrite(MS1,HIGH);
     digitalWrite(MS2,LOW);
