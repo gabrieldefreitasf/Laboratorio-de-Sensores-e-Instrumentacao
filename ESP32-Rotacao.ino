@@ -6,13 +6,13 @@
 // OBS3: Cálculos executados são desenvolvidos no artigo: "Maintaining a stationary laser footprint during angular scan in internal-reflection experiments" - E. Fontana e G. Cavalcanti
 //---------------------------------------------------
 #include <math.h>
-const int stepPin = 18;
-const int dirPin = 19;
-const int stepPinx = 22;
-const int DirPinx = 23;
-const int MS1 = 2;
-const int MS2 = 4;
-const int MS3 = 5;
+const int stepPin = 5;
+const int dirPin = 17;
+const int stepPinx = 2;
+const int DirPinx = 15;
+const int MS1 = 21;
+const int MS2 = 19;
+const int MS3 = 18;
 float pi = 3.14159;
 // Definição de parâmetros do prisma
 float alpha = pi/4;             //Ângulo em rad
@@ -34,17 +34,18 @@ float r;                        //Raio da circunferência inscrita
 
 void setup() {
 Serial.begin(115200);
-pinMode(18, OUTPUT);
-pinMode(19, OUTPUT);
-pinMode(22, OUTPUT);
-pinMode(23, OUTPUT);
-pinMode(2, OUTPUT);
-pinMode(4, OUTPUT);
 pinMode(5, OUTPUT);
+pinMode(17, OUTPUT);
+pinMode(2, OUTPUT);
+pinMode(15, OUTPUT);
+pinMode(21, OUTPUT);
+pinMode(19, OUTPUT);
+pinMode(18, OUTPUT);
 }
 
 void loop() {
-  float theta = 0.00872665;                //Ângulo em radiano a ser rotacionado [Receber do Usuário]
+  delay(1000);
+  float theta = 0.523599;                //Ângulo em radiano a ser rotacionado [Receber do Usuário]
   if (theta<0){                   //Verifica para qual lado deve rotacionar
     digitalWrite(dirPin, HIGH);   //Rotaciona para região negativa(Sentido Anti-Horário)
   }
@@ -82,12 +83,12 @@ void loop() {
     digitalWrite(MS3, LOW);
   }
  
-  for(int i = 0; i < (int)(theta/0.031); i++)    //Dá o número de passos relacionado ao ângulo a ser rotacionado - Atenção para a imprecisão nesse for
+  for(int i = 0; i < (int)(theta/0.00054105207); i++)    //Dá o número de passos relacionado ao ângulo a ser rotacionado - Atenção para a imprecisão nesse for
   {
     digitalWrite(stepPin,HIGH);
-    delayMicroseconds(500);
+    delayMicroseconds(2000);
     digitalWrite(stepPin,LOW);
-    delayMicroseconds(500);
+    delayMicroseconds(2000);
   }
 
   l = a*sin(beta/2)*cos(alpha/2)/sin((alpha+beta)/2);
@@ -102,13 +103,15 @@ void loop() {
   else{
     digitalWrite(DirPinx, LOW);              //Translada para região positiva (Direita)
   }
-  for (int i=0; i < (int)(d/0.011); i++)     //Dá o número de passos relacionado a distância a ser transladada em mm
+  
+  for (int i=0; i < (int)(d/0.007); i++)     //Dá o número de passos relacionado a distância a ser transladada em mm
   {
     digitalWrite(stepPinx, HIGH);
-    delayMicroseconds(500);
+    delayMicroseconds(2000);
     digitalWrite(stepPinx,LOW);
-    delayMicroseconds(500);
+    delayMicroseconds(2000);
   }
   theta_atual=theta_atual+theta;
   Serial.println(d);
+  delay(5000);
 }
