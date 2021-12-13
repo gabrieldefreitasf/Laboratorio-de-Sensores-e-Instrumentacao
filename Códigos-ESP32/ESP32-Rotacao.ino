@@ -9,7 +9,7 @@
 const int stepPin = 5;
 const int dirPin = 17;
 const int stepPinx = 2;
-const int DirPinx = 15;
+const int dirPinx = 15;
 const int MS1 = 21;
 const int MS2 = 19;
 const int MS3 = 18;
@@ -98,10 +98,10 @@ void loop() {
 
   if (d>0)                                   //Verifica se translada no sentido +x ou -x (VERIFICAR ISSO NO MOTOR)
   {                   
-    digitalWrite(DirPinx, HIGH);             //Translada para região negativa(Esquerda)
+    digitalWrite(dirPinx, HIGH);             //Translada para região negativa(Esquerda)
   }
   else{
-    digitalWrite(DirPinx, LOW);              //Translada para região positiva (Direita)
+    digitalWrite(dirPinx, LOW);              //Translada para região positiva (Direita)
   }
   
   for (int i=0; i < (int)(d/0.007); i++)     //Dá o número de passos relacionado a distância a ser transladada em mm
