@@ -1,7 +1,8 @@
 // Controle de Motores de Passo Baseado em Driver a4988 em Experimento RPS - Movimento 2D
 // Laboratório de Sensores e Instrumentação - Grupo de Fotônica - UFPE
 // Gabriel de Freitas
-// OBS: 0.011mm/ passo (Obtido experimentalmente para x e y) PS: Foi para y mesmo? ou so pra x?
+// OBS: 0.0065 mm/ passo (Obtido experimentalmente para x)
+// OBS2: 0.006 mm/passo (Obtido experimentalmente para y)
 //-------------------------------------
 #include <math.h>
 float esp = 2;                                     // Espaçamento entre célular em mm
