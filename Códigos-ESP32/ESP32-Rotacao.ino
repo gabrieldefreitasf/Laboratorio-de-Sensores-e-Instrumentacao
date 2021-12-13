@@ -2,8 +2,9 @@
 // Laboratório de Sensores e Instrumentação - Grupo de Fotônica - UFPE
 // Gabriel de Freitas
 // OBS: 6.163° / revolução. 1 passo rotaciona 0,031°, ou seja, 0,00054105207 rad
-// OBS2: 0.007mm/ passo (Obtido experimentalmente para x e y)
-// OBS3: Cálculos executados são desenvolvidos no artigo: "Maintaining a stationary laser footprint during angular scan in internal-reflection experiments" - E. Fontana e G. Cavalcanti
+// OBS2: 0.0065 mm/ passo (Obtido experimentalmente para x)
+// OBS3: 0.006 mm/passo (Obtido experimentalmente para y)
+// OBS4: Cálculos executados são desenvolvidos no artigo: "Maintaining a stationary laser footprint during angular scan in internal-reflection experiments" - E. Fontana e G. Cavalcanti
 //---------------------------------------------------
 #include <math.h>
 const int stepPin = 5;
