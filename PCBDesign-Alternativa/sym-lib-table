@@ -1,4 +1,0 @@
-(sym_lib_table
-  (lib (name ReflectometroAutomatizado-cache)(type Legacy)(uri ${KIPRJMOD}/ReflectometroAutomatizado-cache.lib)(options "")(descr ""))
-  (lib (name ReflectometroAutomatizado-rescue)(type Legacy)(uri ${KIPRJMOD}/ReflectometroAutomatizado-rescue.lib)(options "")(descr ""))
-)
